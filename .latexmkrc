@@ -1,17 +1,20 @@
 # =========================================================
-# Latexmk configuration for Beamer (PDF via pdflatex)
+# Latexmk configuration
 # =========================================================
 
+# Produce PDF directly (PDF mode).
+$pdf_mode = 1;     
+
 # ---------------------------------------------------------
-# PDF engine: force pdflatex
+# PDF engines
 # ---------------------------------------------------------
 
-$pdf_mode  = 1;    # Produce PDF directly
-$pdflatex  = 'pdflatex -interaction=nonstopmode -halt-on-error %O %S';
+$pdflatex = 'pdflatex -interaction=nonstopmode -halt-on-error %O %S';
 
-# Disable other engines explicitly (safety)
-$lualatex  = '';
-$xelatex   = '';
+$lualatex = 'lualatex -interaction=nonstopmode -halt-on-error %O %S';
+
+# Disable other engine explicitly (safety).
+$xelatex  = '';
 
 # ---------------------------------------------------------
 # Index generation: texindy (French, UTF-8)
@@ -23,8 +26,11 @@ $makeindex = 'texindy -L french -C utf8 %O -o %D %S';
 # General build settings
 # ---------------------------------------------------------
 
-$max_repeat = 5;    # Maximum number of runs
-$silent     = 0;    # Set to 1 for quieter output
+# Maximum number of runs.
+$max_repeat = 5;
+
+# Set to 1 for quieter output.
+$silent     = 0;    
 
 # ---------------------------------------------------------
 # List of generated extensions (for dependency tracking)
