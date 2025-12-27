@@ -1,3 +1,5 @@
+# -*- mode: org; -*-
+
 #+LATEX_HEADER: % Hyperlinks: blue
 #+LATEX_HEADER: \hypersetup{
 #+LATEX_HEADER:   colorlinks=true,
