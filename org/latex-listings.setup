@@ -1,3 +1,5 @@
+# -*- mode: org; -*-
+
 #+LATEX_HEADER: % typeset source code listings
 #+LATEX_HEADER: \usepackage{listings}
 #+LATEX_HEADER:
