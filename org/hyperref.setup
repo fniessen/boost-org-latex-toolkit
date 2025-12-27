@@ -1,0 +1,7 @@
+#+LATEX_HEADER: % Hyperlinks: blue
+#+LATEX_HEADER: \hypersetup{
+#+LATEX_HEADER:   colorlinks=true,
+#+LATEX_HEADER:   urlcolor=blue,
+#+LATEX_HEADER:   linkcolor=blue,
+#+LATEX_HEADER:   citecolor=blue
+#+LATEX_HEADER: }
