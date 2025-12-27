@@ -1,3 +1,5 @@
+# -*- mode: org; -*-
+
 #+LATEX_COMPILER: lualatex
 
 #+BEAMER_HEADER: \usefonttheme{professionalfonts} % Respect external fonts.
