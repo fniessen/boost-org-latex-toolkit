@@ -1,0 +1,45 @@
+# -*- mode: org; -*-
+
+#+BEAMER_THEME: Antibes
+
+#+LATEX_HEADER: % ----------------------------------------------------------------
+#+LATEX_HEADER: % Beamer-only configuration (guarded)
+#+LATEX_HEADER: % ----------------------------------------------------------------
+#+LATEX_HEADER: \makeatletter
+#+LATEX_HEADER: \@ifclassloaded{beamer}{%
+#+LATEX_HEADER:
+#+LATEX_HEADER:   % Footer with frame number
+#+LATEX_HEADER:   \setbeamertemplate{footline}[frame number]
+#+LATEX_HEADER:
+#+LATEX_HEADER:   % Index spacing (used by texindy)
+#+LATEX_HEADER:   \providecommand\indexspace{\par \vskip 10\p@ \@plus5\p@ \@minus3\p@\relax}
+#+LATEX_HEADER:
+#+LATEX_HEADER:   % Index rendered as one or more frames
+#+LATEX_HEADER:   \newenvironment{theindex}{%
+#+LATEX_HEADER:     \begin{frame}[allowframebreaks]%
+#+LATEX_HEADER:       \frametitle{\indexname}%
+#+LATEX_HEADER:       \parindent0pt%
+#+LATEX_HEADER:       \parskip0pt plus 0.3pt%
+#+LATEX_HEADER:       \def\item{\par\hangindent 1.5em}%
+#+LATEX_HEADER:       \def\subitem{\par\hangindent 3em\hspace*{1.5em}}%
+#+LATEX_HEADER:       \def\subsubitem{\par\hangindent 4.5em\hspace*{3em}}%
+#+LATEX_HEADER:       % \begin{multicols}{2}%
+#+LATEX_HEADER:   }{%
+#+LATEX_HEADER:       % \end{multicols}%
+#+LATEX_HEADER:     \end{frame}%
+#+LATEX_HEADER:   }
+#+LATEX_HEADER:
+#+LATEX_HEADER:   % Agenda frame at section start
+#+LATEX_HEADER:   \AtBeginSection{%
+#+LATEX_HEADER:     \begin{frame}[allowframebreaks]
+#+LATEX_HEADER:       \frametitle{Plan}
+#+LATEX_HEADER:       \tableofcontents[
+#+LATEX_HEADER:         currentsection,
+#+LATEX_HEADER:         sectionstyle=show/shaded,
+#+LATEX_HEADER:         subsectionstyle=show/shaded
+#+LATEX_HEADER:       ]
+#+LATEX_HEADER:     \end{frame}
+#+LATEX_HEADER:   }
+#+LATEX_HEADER:
+#+LATEX_HEADER: }{}
+#+LATEX_HEADER: \makeatother
