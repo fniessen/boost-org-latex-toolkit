@@ -17,7 +17,7 @@
           "[NO-PACKAGES]"
           "% org-mc-latex.el ----------------------\n"
           "\\usepackage[AUTO]{inputenc}\n"
-          "% extra (#+LaTeX_HEADER: lines) --------\n"
+          "% extra (#+LATEX_HEADER: lines) --------\n"
           "[EXTRA]\n"
           "% end of `org-latex-classes' -----------"
           "--------------------------------------\n")
@@ -36,7 +36,7 @@
 ;;                         "% packages -----------------------------\n"
 ;;                         "[PACKAGES]"
 ;;                         "% org-mc-latex.el ----------------------\n"
-;;                         "% extra (#+LaTeX/Beamer_HEADER: lines) -\n"
+;;                         "% extra (#+LATEX/Beamer_HEADER: lines) -\n"
 ;;                         "[EXTRA]\n"
 ;;                         "% end of `org-latex-classes' -----------"
 ;;                         "--------------------------------------\n")
