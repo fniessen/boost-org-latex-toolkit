@@ -1,21 +1,219 @@
-* MC LaTeX class
+#+TITLE:     Org mode LaTeX export toolkit with custom classes and Beamer themes
+#+AUTHOR:    Fabrice Niessen
+#+EMAIL:     (concat "fniessen" at-sign "pirilampo.org")
+#+DESCRIPTION: Toolkit to enhance Org mode LaTeX export with custom LaTeX classes, Beamer themes, reusable setup files, and Emacs Lisp integration.
+#+KEYWORDS:  Org mode, LaTeX, Emacs, Beamer, texmf, document classes, PDF export
+#+LANGUAGE:  en
 
-This repository contains the LaTeX class files for use in MC-related documents.
+* Overview
 
-Example:
+This repository contains a coherent set of tools designed to improve and
+structure LaTeX export from Org mode, with a particular focus on:
 
-#+begin_src latex
-\documentclass{mcreport}
+- custom LaTeX classes,
+- dedicated Beamer themes,
+- Org configuration files for LaTeX,
+- an Emacs Lisp integration to declare and use these classes.
 
-\begin{document}
+The repository follows an organization compatible with a local =~/texmf=
+installation and with an Org mode oriented Emacs configuration.
 
-\title{MC Document}
-\author{Your Name}
-\date{\today}
+* Repository structure
 
-\maketitle
+** =docs/=
 
-...
+Contains documentation related to the "mc" LaTeX classes:
 
-\end{document}
+- =Using-the-MC-LaTeX-Class.pdf=
+- =Using-the-MC-LaTeX-Class.tex=
+
+These files describe how to use the LaTeX classes provided.
+
+** =lisp/=
+
+- =org-mc-latex-classes.el=
+
+Emacs Lisp file intended to declare *custom LaTeX classes for Org mode*. It
+enables Org to export documents using the classes defined in this repository.
+
+** =org/=
+
+=.setup= files intended to be included in Org files; for example:
+
+- =beamer-fonts.setup=
+- =latex-hyperref.setup=
+- =latex-listings.setup=
+
+These files are used to centralize reusable LaTeX settings during export from
+Org mode.
+
+** =texmf/=
+
+Directory structure compliant with a local TeX installation.
+
+*** =texmf/tex/latex/mc/=
+
+Custom LaTeX classes and styles:
+
+- =.cls= classes (article, report, book, CV, contract, etc.),
+- shared =.sty= style files.
+
+These files define a coherent family of LaTeX documents under the "mc" prefix.
+
+*** =texmf/tex/latex/beamer-mc/=
+
+Custom Beamer themes:
+
+- theme files =.sty=,
+- corresponding Org sources =.org=.
+
+Those themes are generated from and documented using Org mode.
+
+*** =texmf/tex/latex/generic/images/=
+
+Generic images used by the LaTeX classes or themes.
+
+* Project goals
+
+The project goals are:
+
+- provide ready to use LaTeX classes,
+- facilitate Org mode export to these classes,
+- centralize recurring LaTeX settings,
+- offer Beamer themes consistent with the document classes.
+
+* Usage in Org mode
+
+** LaTeX installation
+
+Make sure TeX can find the classes:
+
+1. Copy or link the =texmf/= directory into your local =~/texmf=.
+2. Update the TeX file database if necessary:
+
+#+begin_src shell
+texhash ~/texmf
 #+end_src
+
+** Emacs installation
+
+Make Org export use the =mcreport= class by adding the Lisp file to your Emacs
+configuration:
+
+#+begin_src emacs-lisp
+(add-to-list 'load-path "/PATH/TO/boost-org-latex-toolkit/lisp")
+(require 'org-mc-latex-classes)
+#+end_src
+
+The exact path depends on the local location of the repository.
+
+Then select the class in your Org file:
+
+#+begin_src org
+#+LATEX_CLASS: mcreport
+#+end_src
+
+** Set document metadata in Org
+
+Org standard metadata keywords are used to populate the LaTeX document.
+
+In your Org file:
+
+#+begin_src org
+,#+TITLE:     Your document
+,#+AUTHOR:    Your name
+,#+EMAIL:     Your email
+,#+DATE:      \today
+,#+DESCRIPTION: Short description of the document purpose.
+,#+KEYWORDS:  Org mode, LaTeX, Emacs
+,#+LATEX_CLASS: mcreport
+#+end_src
+
+What Org guarantees during LaTeX export:
+
+- =#+TITLE:= → =\title{Your document}=
+- =#+AUTHOR:= → =\author{Your name}=
+- =#+DATE:= → =\date{\today}=
+
+Regarding the additional fields:
+
+- =#+DESCRIPTION:= is exported to LaTeX as document metadata (for example PDF
+  metadata) when supported by the class and packages in use.
+- =#+KEYWORDS:= is exported as LaTeX metadata in the same way.
+
+The exact visual or semantic use of *DESCRIPTION* and *KEYWORDS* depends entirely
+on:
+- the LaTeX class (for example =mcreport=),
+- and the packages it loads (for example =hyperref=).
+
+** Include the repository's reusable LaTeX setup snippets (optional)
+
+You may include the =.setup= files (provided in the =org/= directory) in an Org file
+with:
+
+#+begin_src org
+,#+SETUPFILE: /PATH/TO/boost-org-latex-toolkit/org/latex-hyperref.setup
+,#+SETUPFILE: /PATH/TO/boost-org-latex-toolkit/org/latex-listings.setup
+#+end_src
+
+The exact behavior depends on the content of each =.setup= file.
+
+** Minimal complete Org example
+
+#+begin_src org
+,#+TITLE:     Your document
+,#+SUBTITLE:  Project overview
+,#+AUTHOR:    Your name
+,#+EMAIL:     Your email
+,#+DATE:      \today
+,#+DESCRIPTION: Example document generated from Org mode.
+,#+KEYWORDS:  Org, LaTeX, Emacs, MC
+,#+LATEX_CLASS: mcreport
+
+,* Introduction
+
+Some content.
+
+,* Conclusion
+
+More content.
+#+end_src
+
+Export with:
+
+- =C-c C-e l l= to generate the LaTeX file, or
+- =C-c C-e l o= to generate and open the PDF (depending on your configuration).
+
+The resulting LaTeX file will include:
+
+- =\documentclass{mcreport}= and
+- standard title metadata.
+
+* License
+
+Copyright (C) 2025 Fabrice Niessen. All rights reserved.
+
+Author: Fabrice Niessen \\
+Keywords: org-mode latex beamer export
+
+This program is free software; you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software
+Foundation, either version 3 of the License, or (at your option) any later
+version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
+A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with
+this program. If not, see http://www.gnu.org/licenses/.
+
+#+begin_html
+<a href="http://opensource.org/licenses/GPL-3.0">
+  <img src="http://img.shields.io/:license-gpl-blue.svg" alt=":license-gpl-blue.svg" />
+</a>
+
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=VCVAS6KPDQ4JC&lc=BE&item_number=org%2dhtml%2dthemes&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted">
+  <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" alt="btn_donate_LG.gif" />
+</a>
+#+end_html
