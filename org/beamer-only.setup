@@ -8,13 +8,16 @@
 #+LATEX_HEADER: \makeatletter
 #+LATEX_HEADER: \@ifclassloaded{beamer}{%
 #+LATEX_HEADER:
-#+LATEX_HEADER:   % Footer with frame number
+#+LATEX_HEADER:   % Footer with frame number.
 #+LATEX_HEADER:   \setbeamertemplate{footline}[frame number]
 #+LATEX_HEADER:
-#+LATEX_HEADER:   % Index spacing (used by texindy)
+#+LATEX_HEADER:   % Frame title continuation (avoid "(cont.)" on single frames).
+#+LATEX_HEADER:   \setbeamertemplate{frametitle continuation}[singleframecheck]
+#+LATEX_HEADER:
+#+LATEX_HEADER:   % Index spacing (used by texindy).
 #+LATEX_HEADER:   \providecommand\indexspace{\par \vskip 10\p@ \@plus5\p@ \@minus3\p@\relax}
 #+LATEX_HEADER:
-#+LATEX_HEADER:   % Index rendered as one or more frames
+#+LATEX_HEADER:   % Index rendered as one or more frames.
 #+LATEX_HEADER:   \newenvironment{theindex}{%
 #+LATEX_HEADER:     \begin{frame}[allowframebreaks]%
 #+LATEX_HEADER:       \frametitle{\indexname}%
@@ -29,7 +32,7 @@
 #+LATEX_HEADER:     \end{frame}%
 #+LATEX_HEADER:   }
 #+LATEX_HEADER:
-#+LATEX_HEADER:   % Agenda frame at section start
+#+LATEX_HEADER:   % Agenda frame at section start.
 #+LATEX_HEADER:   \AtBeginSection{%
 #+LATEX_HEADER:     \begin{frame}[allowframebreaks]
 #+LATEX_HEADER:       \frametitle{Plan}
