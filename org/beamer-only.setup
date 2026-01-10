@@ -39,7 +39,6 @@
 #+LATEX_HEADER:       \tableofcontents[
 #+LATEX_HEADER:         currentsection,
 #+LATEX_HEADER:         sectionstyle=show/shaded,
-#+LATEX_HEADER:         subsectionstyle=show/shaded
 #+LATEX_HEADER:       ]
 #+LATEX_HEADER:     \end{frame}
 #+LATEX_HEADER:   }
