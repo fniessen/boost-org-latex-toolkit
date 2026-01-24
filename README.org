@@ -41,6 +41,7 @@ enables Org to export documents using the classes defined in this repository.
 =.setup= files intended to be included in Org files; for example:
 
 - =beamer-fonts.setup=
+- =beamer-only.setup=
 - =latex-hyperref.setup=
 - =latex-listings.setup=
 
