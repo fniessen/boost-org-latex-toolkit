@@ -1,5 +1,11 @@
 # -*- mode: org; -*-
 
+#+LATEX_HEADER: % ==============================================================
+#+LATEX_HEADER: % BEGIN SETUPFILE: latex-listings.setup
+#+LATEX_HEADER: % Purpose: Listings configuration for source code typesetting and syntax highlighting
+#+LATEX_HEADER: % Scope: LaTeX exports using the listings package; applies to Beamer and other classes
+#+LATEX_HEADER: % ==============================================================
+
 #+LATEX_HEADER: % typeset source code listings
 #+LATEX_HEADER: \usepackage{listings}
 #+LATEX_HEADER:
@@ -127,3 +133,7 @@
 #+LATEX_HEADER: \definecolor{TeXrulecolor}{HTML}{D4E8E3}
 #+LATEX_HEADER: \lstdefinestyle{TeX}{backgroundcolor=\color{TeXbackgroundcolor},rulecolor=\color{TeXrulecolor}}
 #+LATEX_HEADER: \lstalias{shell}{sh}
+
+#+LATEX_HEADER: % ==============================================================
+#+LATEX_HEADER: % END SETUPFILE: latex-listings.setup
+#+LATEX_HEADER: % ==============================================================

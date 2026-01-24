@@ -1,7 +1,17 @@
 # -*- mode: org; -*-
 
+#+LATEX_HEADER: % ==============================================================
+#+LATEX_HEADER: % BEGIN SETUPFILE: beamer-fonts.setup
+#+LATEX_HEADER: % Purpose: Beamer font configuration using LuaLaTeX and fontspec
+#+LATEX_HEADER: % Scope: Beamer export only; requires LuaLaTeX and external system fonts
+#+LATEX_HEADER: % ==============================================================
+
 #+LATEX_COMPILER: lualatex
 
 #+BEAMER_HEADER: \usefonttheme{professionalfonts} % Respect external fonts.
 #+BEAMER_HEADER: \usepackage{fontspec}
 #+BEAMER_HEADER: \setsansfont{Roboto} % Or Montserrat, Open Sans, etc.
+
+#+LATEX_HEADER: % ==============================================================
+#+LATEX_HEADER: % END SETUPFILE: beamer-fonts.setup
+#+LATEX_HEADER: % ==============================================================

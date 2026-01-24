@@ -1,10 +1,16 @@
 # -*- mode: org; -*-
 
+#+LATEX_HEADER: % ==============================================================
+#+LATEX_HEADER: % BEGIN SETUPFILE: beamer-only.setup
+#+LATEX_HEADER: % Purpose: LaTeX configuration specific to Beamer
+#+LATEX_HEADER: % Scope: Beamer export only (guarded with \@ifclassloaded)
+#+LATEX_HEADER: % ==============================================================
+
 #+BEAMER_THEME: Antibes
 
-#+LATEX_HEADER: % ----------------------------------------------------------------
+#+LATEX_HEADER: % --------------------------------------------------------------
 #+LATEX_HEADER: % Beamer-only configuration (guarded)
-#+LATEX_HEADER: % ----------------------------------------------------------------
+#+LATEX_HEADER: % --------------------------------------------------------------
 #+LATEX_HEADER: \makeatletter
 #+LATEX_HEADER: \@ifclassloaded{beamer}{%
 #+LATEX_HEADER:
@@ -45,3 +51,7 @@
 #+LATEX_HEADER:
 #+LATEX_HEADER: }{}
 #+LATEX_HEADER: \makeatother
+
+#+LATEX_HEADER: % ==============================================================
+#+LATEX_HEADER: % END SETUPFILE: beamer-only.setup
+#+LATEX_HEADER: % ==============================================================
