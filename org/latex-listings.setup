@@ -90,7 +90,7 @@
 #+LATEX_HEADER:   {â}{{\^a}}1
 #+LATEX_HEADER:   {ä}{{\"a}}1
 #+LATEX_HEADER:   {ç}{{\c{c}}}1
-#+LATEX_HEADER:   {é}{{\color{black}\'e}}1
+#+LATEX_HEADER:   {é}{{\'e}}1
 #+LATEX_HEADER:   {è}{{\`e}}1
 #+LATEX_HEADER:   {ê}{{\^e}}1
 #+LATEX_HEADER:   {ë}{{\"e}}1
