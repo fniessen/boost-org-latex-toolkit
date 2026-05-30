@@ -2,16 +2,20 @@
 
 #+LATEX_HEADER: % ==============================================================
 #+LATEX_HEADER: % BEGIN SETUPFILE: latex-hyperref.setup
-#+LATEX_HEADER: % Purpose: Hyperref configuration for link appearance (colors)
-#+LATEX_HEADER: % Scope: LaTeX exports using hyperref; applies to Beamer and other classes
+#+LATEX_HEADER: % Purpose: Hyperref configuration for link appearance and colors
+#+LATEX_HEADER: % Scope: LaTeX exports using hyperref (Beamer and non-Beamer)
 #+LATEX_HEADER: % ==============================================================
 
-#+LATEX_HEADER: % Hyperlinks: blue
+#+LATEX_HEADER: % Custom color used for internal document links.
+#+LATEX_HEADER: \usepackage{xcolor}
+#+LATEX_HEADER: \definecolor{LinkOrange}{RGB}{255,190,80}
+
+#+LATEX_HEADER: % Hyperlink color configuration.
 #+LATEX_HEADER: \hypersetup{
-#+LATEX_HEADER:   colorlinks=true,
-#+LATEX_HEADER:   urlcolor=blue,
-#+LATEX_HEADER:   linkcolor=blue,
-#+LATEX_HEADER:   citecolor=blue
+#+LATEX_HEADER:   colorlinks  = true,
+#+LATEX_HEADER:   urlcolor    = blue,
+#+LATEX_HEADER:   linkcolor   = LinkOrange,
+#+LATEX_HEADER:   citecolor   = blue
 #+LATEX_HEADER: }
 
 #+LATEX_HEADER: % ==============================================================
