@@ -17,6 +17,9 @@
 #+LATEX_HEADER:   % Footer with frame number.
 #+LATEX_HEADER:   \setbeamertemplate{footline}[frame number]
 #+LATEX_HEADER:
+#+LATEX_HEADER:   % Hide Beamer navigation symbols.
+#+LATEX_HEADER:   \setbeamertemplate{navigation symbols}{}
+#+LATEX_HEADER:
 #+LATEX_HEADER:   % Frame title continuation (avoid "(cont.)" on single frames).
 #+LATEX_HEADER:   \setbeamertemplate{frametitle continuation}[singleframecheck]
 #+LATEX_HEADER:
