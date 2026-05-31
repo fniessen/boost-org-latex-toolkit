@@ -14,6 +14,20 @@
 #+LATEX_HEADER: \makeatletter
 #+LATEX_HEADER: \@ifclassloaded{beamer}{%
 #+LATEX_HEADER:
+#+LATEX_HEADER:   % Header with current section and subsection only.
+#+LATEX_HEADER:   \definecolor{SectionHeader}{RGB}{200,200,200}
+#+LATEX_HEADER:   \definecolor{SubsectionHeader}{RGB}{228,228,228}
+#+LATEX_HEADER:   \AtBeginDocument{%
+#+LATEX_HEADER:     \setbeamertemplate{headline}{%
+#+LATEX_HEADER:       \begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=1em,rightskip=1em]{section in head/foot}
+#+LATEX_HEADER:         \hypersetup{linkcolor=SectionHeader}{\color{SectionHeader}\insertsectionhead}
+#+LATEX_HEADER:       \end{beamercolorbox}
+#+LATEX_HEADER:       \begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=1em,rightskip=1em]{subsection in head/foot}
+#+LATEX_HEADER:         \hypersetup{linkcolor=SubsectionHeader}{\color{SubsectionHeader}\insertsubsectionhead}
+#+LATEX_HEADER:       \end{beamercolorbox}
+#+LATEX_HEADER:     }%
+#+LATEX_HEADER:   }
+#+LATEX_HEADER:
 #+LATEX_HEADER:   % Footer with frame number.
 #+LATEX_HEADER:   \setbeamertemplate{footline}[frame number]
 #+LATEX_HEADER:
