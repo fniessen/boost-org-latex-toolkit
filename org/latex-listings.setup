@@ -17,11 +17,12 @@
 #+LATEX_HEADER: \definecolor{mc@lstbackground}{HTML}{FFFFCC} % light yellow
 #+LATEX_HEADER: \definecolor{mc@lstframe}{HTML}{FFEE88} % dark yellow
 #+LATEX_HEADER:
-#+LATEX_HEADER: \definecolor{mc@lstgitcmd}{HTML}{0000FF}      % git, cd, ls...
-#+LATEX_HEADER: \definecolor{mc@lstgitsubcmd}{HTML}{9900CC}   % commit, log, merge...
-#+LATEX_HEADER: \definecolor{mc@lstgitopt}{HTML}{CC5500}      % --graph, --oneline...
-#+LATEX_HEADER: \definecolor{mc@lstgitref}{HTML}{008200}      % HEAD
-#+LATEX_HEADER: \definecolor{mc@lstgitalias}{HTML}{AA0000}    % st, co, br...
+#+LATEX_HEADER: \definecolor{mc@lstgitcmd}{HTML}{0000FF}      % bleu : git, cd, ls...
+#+LATEX_HEADER: \definecolor{mc@lstgitsubcmd}{HTML}{9900CC}   % violet : commit, log, merge...
+#+LATEX_HEADER: \definecolor{mc@lstgitopt}{HTML}{CC5500}      % orange foncé : --graph, --oneline, --cached...
+#+LATEX_HEADER: \definecolor{mc@lstgitref}{HTML}{008200}      % vert : HEAD
+#+LATEX_HEADER: \definecolor{mc@lstgitshortopt}{HTML}{AA0000} % rouge foncé : a, p, v, m, am...
+#+LATEX_HEADER: \definecolor{mc@lstgboost}{HTML}{008080}      % turquoise : alias GitBoost (st, co, ll, reword, br...)
 #+LATEX_HEADER:
 #+LATEX_HEADER: % colors for diff listings
 #+LATEX_HEADER: \definecolor{mc@diffstart}{HTML}{666666}   % headers, hunks
@@ -50,30 +51,47 @@
 #+LATEX_HEADER: % Shell commands with Git-aware highlighting.
 #+LATEX_HEADER: \lstdefinelanguage{shell}{
 #+LATEX_HEADER:   morekeywords={
-#+LATEX_HEADER:     git,cd,mkdir,touch,echo,cat,ls,pwd,rm,mv,cp
+#+LATEX_HEADER:     git,cd,mkdir,touch,echo,cat,ls,pwd,rm,mv,cp,grep
 #+LATEX_HEADER:   },
 #+LATEX_HEADER:   morekeywords=[2]{
 #+LATEX_HEADER:     clone,init,status,diff,add,commit,log,blame,branch,checkout,
 #+LATEX_HEADER:     tag,remote,show,fetch,pull,push,merge,rebase,mergetool,reset,
-#+LATEX_HEADER:     revert,switch,restore,clean,stash,reflog,
-#+LATEX_HEADER:     cherry-pick,config
+#+LATEX_HEADER:     revert,switch,restore,clean,stash,pop,apply,reflog,
+#+LATEX_HEADER:     cherry-pick,config,ls-files,bisect,start,bad,good,run,xargs,zip,head,tail
 #+LATEX_HEADER:   },
 #+LATEX_HEADER:   morekeywords=[3]{
-#+LATEX_HEADER:     track,hard,keep,abort,continue,amend,tags,squash,
+#+LATEX_HEADER:     track,hard,keep,abort,continue,amend,tags,
 #+LATEX_HEADER:     cached,staged,stat,worktree,graph,oneline,
 #+LATEX_HEADER:     follow,source,force-with-lease,global,decorate,all,soft
 #+LATEX_HEADER:   },
 #+LATEX_HEADER:   morekeywords=[4]{
-#+LATEX_HEADER:     HEAD
+#+LATEX_HEADER:     HEAD,main,develop,feature,export-csv,feature/login,origin
 #+LATEX_HEADER:   },
 #+LATEX_HEADER:   morekeywords=[5]{
 #+LATEX_HEADER:     a,p,v,m,am,av,d,s,b
+#+LATEX_HEADER:   },
+#+LATEX_HEADER:   morekeywords=[6]{
+#+LATEX_HEADER:     st,df,wdf,mindf,dfc,wdfc,mindfc,wshow,minshow,create-branch,current-branch,branches,missing,common-ancestor,merge-test,uncommit-unstage,
+#+LATEX_HEADER:     ls,ll,lll,upstream-commit,local-commit,amend-message,
+#+LATEX_HEADER:     br,co,record,commit-interactive,branches-containing,r,out,outgoing,in,incoming,publish-branch,
+#+LATEX_HEADER:     recommit,reword,
+#+LATEX_HEADER:     amend-reuse,rename-local-branch,delete-remote-branch,rename-branch,
+#+LATEX_HEADER:     squash,all-repos,log-unified-diff,whoami,aliases,grep-aliases,
+#+LATEX_HEADER:     changed-files,ignore,gno,
+#+LATEX_HEADER:     stash-all,
+#+LATEX_HEADER:     stash-only-untracked,
+#+LATEX_HEADER:     unmodify,
+#+LATEX_HEADER:     uncommit,grep-all-tracked-files,search-for-code,
+#+LATEX_HEADER:     uncommit-unadd,grep-all-local-branches,grep-all-commits,related-files,release-tag,
+#+LATEX_HEADER:     pull-autostash,delete-gone-branches,find-commit-messages-all,find-commit-messages-any,find-commit-diffs-all-branches,grep-current-branch,ack,
+#+LATEX_HEADER:     init-repository,unstage,unadd,releases,file-history,file-history-all-branches,file-last-commit-all-local-branches,wwflu
 #+LATEX_HEADER:   },
 #+LATEX_HEADER:   keywordstyle=[1]\color{mc@lstgitcmd}\bfseries,
 #+LATEX_HEADER:   keywordstyle=[2]\color{mc@lstgitsubcmd}\bfseries,
 #+LATEX_HEADER:   keywordstyle=[3]\color{mc@lstgitopt},
 #+LATEX_HEADER:   keywordstyle=[4]\color{mc@lstgitref}\bfseries,
-#+LATEX_HEADER:   keywordstyle=[5]\color{mc@lstgitalias}\bfseries,
+#+LATEX_HEADER:   keywordstyle=[5]\color{mc@lstgitshortopt}\bfseries,
+#+LATEX_HEADER:   keywordstyle=[6]\color{mc@lstgboost}\bfseries,
 #+LATEX_HEADER:   alsoletter={-.},
 #+LATEX_HEADER:   sensitive=true,
 #+LATEX_HEADER: }
