@@ -15,4 +15,4 @@
 #+LATEX_HEADER:
 #+LATEX_HEADER: % Monospaced font used for source code and terminal output.
 #+LATEX_HEADER: \defaultfontfeatures[\ttfamily]{Contextuals={}}
-#+LATEX_HEADER: \setmonofont[Scale=0.85]{Latin Modern Mono} % JuliaMono
+#+LATEX_HEADER: \setmonofont[Scale=0.89]{Latin Modern Mono} % JuliaMono
