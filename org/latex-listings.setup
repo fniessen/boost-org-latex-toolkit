@@ -17,6 +17,12 @@
 #+LATEX_HEADER: \definecolor{mc@lstbackground}{HTML}{FFFFCC} % light yellow
 #+LATEX_HEADER: \definecolor{mc@lstframe}{HTML}{FFEE88} % dark yellow
 #+LATEX_HEADER:
+#+LATEX_HEADER: \definecolor{mc@lstgitcmd}{HTML}{0000FF}      % git, cd, ls...
+#+LATEX_HEADER: \definecolor{mc@lstgitsubcmd}{HTML}{9900CC}   % commit, log, merge...
+#+LATEX_HEADER: \definecolor{mc@lstgitopt}{HTML}{CC5500}      % --graph, --oneline...
+#+LATEX_HEADER: \definecolor{mc@lstgitref}{HTML}{008200}      % HEAD
+#+LATEX_HEADER: \definecolor{mc@lstgitalias}{HTML}{AA0000}    % st, co, br...
+#+LATEX_HEADER:
 #+LATEX_HEADER: % colors for diff listings
 #+LATEX_HEADER: \definecolor{mc@diffstart}{HTML}{666666}   % headers, hunks
 #+LATEX_HEADER: \definecolor{mc@diffadded}{HTML}{008200}   % added lines
@@ -41,6 +47,37 @@
 #+LATEX_HEADER:   morecomment=[l]{\#},
 #+LATEX_HEADER: }
 #+LATEX_HEADER:
+#+LATEX_HEADER: % Shell commands with Git-aware highlighting.
+#+LATEX_HEADER: \lstdefinelanguage{shell}{
+#+LATEX_HEADER:   morekeywords={
+#+LATEX_HEADER:     git,cd,mkdir,touch,echo,cat,ls,pwd,rm,mv,cp
+#+LATEX_HEADER:   },
+#+LATEX_HEADER:   morekeywords=[2]{
+#+LATEX_HEADER:     clone,init,status,diff,add,commit,log,blame,branch,checkout,
+#+LATEX_HEADER:     tag,remote,show,fetch,pull,push,merge,rebase,mergetool,reset,
+#+LATEX_HEADER:     revert,switch,restore,clean,stash,reflog,
+#+LATEX_HEADER:     cherry-pick,config
+#+LATEX_HEADER:   },
+#+LATEX_HEADER:   morekeywords=[3]{
+#+LATEX_HEADER:     track,hard,keep,abort,continue,amend,tags,squash,
+#+LATEX_HEADER:     cached,staged,stat,worktree,graph,oneline,
+#+LATEX_HEADER:     follow,source,force-with-lease,global,decorate,all,soft
+#+LATEX_HEADER:   },
+#+LATEX_HEADER:   morekeywords=[4]{
+#+LATEX_HEADER:     HEAD
+#+LATEX_HEADER:   },
+#+LATEX_HEADER:   morekeywords=[5]{
+#+LATEX_HEADER:     a,p,v,m,am,av,d,s,b
+#+LATEX_HEADER:   },
+#+LATEX_HEADER:   keywordstyle=[1]\color{mc@lstgitcmd}\bfseries,
+#+LATEX_HEADER:   keywordstyle=[2]\color{mc@lstgitsubcmd}\bfseries,
+#+LATEX_HEADER:   keywordstyle=[3]\color{mc@lstgitopt},
+#+LATEX_HEADER:   keywordstyle=[4]\color{mc@lstgitref}\bfseries,
+#+LATEX_HEADER:   keywordstyle=[5]\color{mc@lstgitalias}\bfseries,
+#+LATEX_HEADER:   alsoletter={-.},
+#+LATEX_HEADER:   sensitive=true,
+#+LATEX_HEADER: }
+#+LATEX_HEADER:
 #+LATEX_HEADER: \lstset{%
 #+LATEX_HEADER:   lineskip=-0.1em,
 #+LATEX_HEADER:   %
@@ -52,7 +89,7 @@
 #+LATEX_HEADER:   %
 #+LATEX_HEADER:   extendedchars=true,
 #+LATEX_HEADER:   inputencoding=utf8,
-#+LATEX_HEADER:   upquote, %
+#+LATEX_HEADER:   upquote,
 #+LATEX_HEADER:   tabsize=4, % set default tabsize to 4 spaces
 #+LATEX_HEADER:   showtabs=false, % show tabs within strings adding particular underscores
 #+LATEX_HEADER:   %  tab=$\to$,
@@ -132,7 +169,6 @@
 #+LATEX_HEADER: \definecolor{TeXbackgroundcolor}{HTML}{F1F9EF}
 #+LATEX_HEADER: \definecolor{TeXrulecolor}{HTML}{D4E8E3}
 #+LATEX_HEADER: \lstdefinestyle{TeX}{backgroundcolor=\color{TeXbackgroundcolor},rulecolor=\color{TeXrulecolor}}
-#+LATEX_HEADER: \lstalias{shell}{sh}
 
 #+LATEX_HEADER: % ==============================================================
 #+LATEX_HEADER: % END SETUPFILE: latex-listings.setup
