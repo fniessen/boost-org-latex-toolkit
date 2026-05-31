@@ -180,6 +180,10 @@
 #+LATEX_HEADER:   keywordstyle=[4]\color{mc@lstgitref}\bfseries,
 #+LATEX_HEADER:   keywordstyle=[5]\color{mc@lstgitshortopt}\bfseries,
 #+LATEX_HEADER:   keywordstyle=[6]\color{mc@lstgboost}\bfseries,
+#+LATEX_HEADER:   %
+#+LATEX_HEADER:   % Treat lines starting with '#' as shell comments.
+#+LATEX_HEADER:   morecomment=[l]{\#},
+#+LATEX_HEADER:   %
 #+LATEX_HEADER:   % Treat '-', '.' and '/' as part of identifiers so compound Git names
 #+LATEX_HEADER:   % such as cherry-pick, force-with-lease and feature/login are highlighted
 #+LATEX_HEADER:   % as single keywords.
