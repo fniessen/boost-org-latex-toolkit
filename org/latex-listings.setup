@@ -80,6 +80,8 @@
 #+LATEX_HEADER:     HEAD,
 #+LATEX_HEADER:     COMMIT_HASH,
 #+LATEX_HEADER:     origin,
+#+LATEX_HEADER:     origin/main,
+#+LATEX_HEADER:     origin/develop,
 #+LATEX_HEADER:     main,
 #+LATEX_HEADER:     develop,
 #+LATEX_HEADER:     feature,
