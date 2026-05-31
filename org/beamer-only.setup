@@ -28,6 +28,11 @@
 #+LATEX_HEADER:     }%
 #+LATEX_HEADER:   }
 #+LATEX_HEADER:
+#+LATEX_HEADER:   % Alert text styling.
+#+LATEX_HEADER:   \definecolor{AlertBlue}{HTML}{0969DA}
+#+LATEX_HEADER:   \setbeamercolor{alerted text}{fg=AlertBlue}
+#+LATEX_HEADER:   \setbeamerfont{alerted text}{series=\bfseries}
+#+LATEX_HEADER:
 #+LATEX_HEADER:   % Footer with frame number.
 #+LATEX_HEADER:   \setbeamertemplate{footline}[frame number]
 #+LATEX_HEADER:
