@@ -87,7 +87,9 @@
 #+LATEX_HEADER:     feature/export-csv,
 #+LATEX_HEADER:     export-csv,
 #+LATEX_HEADER:     FILE,PATH/TO/FILE,
-#+LATEX_HEADER:     FICHIER,CHEMIN/VERS/FICHIER
+#+LATEX_HEADER:     FICHIER,CHEMIN/VERS/FICHIER,
+#+LATEX_HEADER:     PATTERN,
+#+LATEX_HEADER:     TREE
 #+LATEX_HEADER:   },
 #+LATEX_HEADER:   % Short options.
 #+LATEX_HEADER:   morekeywords=[5]{
