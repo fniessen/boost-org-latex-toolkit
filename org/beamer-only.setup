@@ -13,6 +13,8 @@
 #+LATEX_HEADER: % --------------------------------------------------------------
 #+LATEX_HEADER: \makeatletter
 #+LATEX_HEADER: \@ifclassloaded{beamer}{%
+#+LATEX_HEADER:   % Respect fonts configured with fontspec.
+#+LATEX_HEADER:   \usefonttheme{professionalfonts}
 #+LATEX_HEADER:
 #+LATEX_HEADER:   % Header with current section and subsection only.
 #+LATEX_HEADER:   \definecolor{SectionHeader}{RGB}{200,200,200}

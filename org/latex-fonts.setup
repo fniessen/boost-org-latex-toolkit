@@ -1,0 +1,18 @@
+# -*- mode: org; -*-
+
+#+LATEX_COMPILER: lualatex
+
+#+LATEX_HEADER: % --------------------------------------------------------------
+#+LATEX_HEADER: % Fonts
+#+LATEX_HEADER: % --------------------------------------------------------------
+#+LATEX_HEADER: \usepackage{fontspec}
+#+LATEX_HEADER:
+#+LATEX_HEADER: % Main sans-serif font used throughout the document.
+#+LATEX_HEADER: \setsansfont{KpSans}
+#+LATEX_HEADER:
+#+LATEX_HEADER: % Use the sans-serif font as the default document font.
+#+LATEX_HEADER: \renewcommand{\familydefault}{\sfdefault}
+#+LATEX_HEADER:
+#+LATEX_HEADER: % Monospaced font used for source code and terminal output.
+#+LATEX_HEADER: \defaultfontfeatures[\ttfamily]{Contextuals={}}
+#+LATEX_HEADER: \setmonofont[Scale=0.85]{Latin Modern Mono} % JuliaMono
