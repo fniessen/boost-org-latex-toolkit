@@ -8,14 +8,16 @@
 
 #+LATEX_HEADER: % Custom color used for internal document links.
 #+LATEX_HEADER: \usepackage{xcolor}
-#+LATEX_HEADER: \definecolor{LinkOrange}{RGB}{255,190,80}
+#+LATEX_HEADER: \definecolor{LinkBlue}{HTML}{0000CC}
+#+LATEX_HEADER: \definecolor{CiteGreen}{HTML}{008000}
+#+LATEX_HEADER: \definecolor{UrlMagenta}{HTML}{AA00AA}
 
 #+LATEX_HEADER: % Hyperlink color configuration.
 #+LATEX_HEADER: \hypersetup{
 #+LATEX_HEADER:   colorlinks  = true,
-#+LATEX_HEADER:   urlcolor    = blue,
-#+LATEX_HEADER:   linkcolor   = LinkOrange,
-#+LATEX_HEADER:   citecolor   = blue
+#+LATEX_HEADER:   linkcolor   = LinkBlue,
+#+LATEX_HEADER:   citecolor   = CiteGreen,
+#+LATEX_HEADER:   urlcolor    = UrlMagenta
 #+LATEX_HEADER: }
 
 #+LATEX_HEADER: % ==============================================================
