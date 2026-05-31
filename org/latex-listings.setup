@@ -75,16 +75,19 @@
 #+LATEX_HEADER:     staged,stat,tags,track,
 #+LATEX_HEADER:     worktree
 #+LATEX_HEADER:   },
-#+LATEX_HEADER:   % Common refs, branches and remotes.
+#+LATEX_HEADER:   % Common Git references, example branch names and placeholders.
 #+LATEX_HEADER:   morekeywords=[4]{
 #+LATEX_HEADER:     HEAD,
+#+LATEX_HEADER:     COMMIT_HASH,
 #+LATEX_HEADER:     origin,
 #+LATEX_HEADER:     main,
 #+LATEX_HEADER:     develop,
 #+LATEX_HEADER:     feature,
-#+LATEX_HEADER:     feature/export-csv,
 #+LATEX_HEADER:     feature/login,
-#+LATEX_HEADER:     export-csv
+#+LATEX_HEADER:     feature/export-csv,
+#+LATEX_HEADER:     export-csv,
+#+LATEX_HEADER:     FILE,PATH/TO/FILE,
+#+LATEX_HEADER:     FICHIER,CHEMIN/VERS/FICHIER
 #+LATEX_HEADER:   },
 #+LATEX_HEADER:   % Short options.
 #+LATEX_HEADER:   morekeywords=[5]{
@@ -144,6 +147,7 @@
 #+LATEX_HEADER:     record,
 #+LATEX_HEADER:     related-files,
 #+LATEX_HEADER:     release-tag,
+#+LATEX_HEADER:     releases,
 #+LATEX_HEADER:     rename-branch,
 #+LATEX_HEADER:     rename-local-branch,
 #+LATEX_HEADER:     reword,
