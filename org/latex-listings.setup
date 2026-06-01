@@ -52,14 +52,14 @@
 #+LATEX_HEADER: \lstdefinelanguage{shell}{
 #+LATEX_HEADER:   % Generic shell commands.
 #+LATEX_HEADER:   morekeywords={
-#+LATEX_HEADER:     cat,cd,cp,echo,git,grep,
-#+LATEX_HEADER:     ls,mkdir,mv,pwd,rm,touch
+#+LATEX_HEADER:     apt,cat,cd,cp,echo,git,grep,
+#+LATEX_HEADER:     ls,mkdir,mv,pwd,rm,smerge,sudo,touch,wget
 #+LATEX_HEADER:   },
 #+LATEX_HEADER:   % Git commands and common Unix commands used with Git.
 #+LATEX_HEADER:   morekeywords=[2]{
 #+LATEX_HEADER:     add,apply,bad,bisect,blame,branch,
 #+LATEX_HEADER:     checkout,cherry-pick,clean,clone,commit,config,
-#+LATEX_HEADER:     diff,fetch,good,head,init,
+#+LATEX_HEADER:     diff,fetch,good,head,init,install,
 #+LATEX_HEADER:     log,ls-files,merge,mergetool,
 #+LATEX_HEADER:     pop,pull,push,rebase,reflog,
 #+LATEX_HEADER:     remote,reset,restore,revert,run,
