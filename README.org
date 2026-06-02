@@ -43,6 +43,7 @@ enables Org to export documents using the classes defined in this repository.
 - =beamer-only.setup=
 - =latex-fonts.setup=
 - =latex-hyperref.setup=
+- =latex-layout.setup=
 - =latex-listings.setup=
 
 These files are used to centralize reusable LaTeX settings during export from
