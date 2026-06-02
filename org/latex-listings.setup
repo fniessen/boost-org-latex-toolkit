@@ -202,7 +202,10 @@
 #+LATEX_HEADER:   \BeginAccSupp{ActualText={}}#1\EndAccSupp{}%
 #+LATEX_HEADER: }
 #+LATEX_HEADER:
+#+LATEX_HEADER: \definecolor{mc@lstlinenumber}{gray}{0.75}
+#+LATEX_HEADER:
 #+LATEX_HEADER: \newcommand{\lstnumberstyle}{%
+#+LATEX_HEADER:   \color{mc@lstlinenumber}%
 #+LATEX_HEADER:   \tiny\ttfamily\emptyaccsupp
 #+LATEX_HEADER: }
 #+LATEX_HEADER:
