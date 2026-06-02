@@ -1,5 +1,11 @@
 # -*- mode: org; -*-
 
+#+LATEX_HEADER: % ==============================================================
+#+LATEX_HEADER: % BEGIN SETUPFILE: latex-fonts.setup
+#+LATEX_HEADER: % Purpose: LuaLaTeX font configuration and font selection
+#+LATEX_HEADER: % Scope: All LaTeX exports
+#+LATEX_HEADER: % ==============================================================
+
 #+LATEX_COMPILER: lualatex
 
 #+LATEX_HEADER: % --------------------------------------------------------------
@@ -16,3 +22,7 @@
 #+LATEX_HEADER: % Monospaced font used for source code and terminal output.
 #+LATEX_HEADER: \defaultfontfeatures[\ttfamily]{Contextuals={}}
 #+LATEX_HEADER: \setmonofont[Scale=0.89]{Latin Modern Mono} % JuliaMono
+
+#+LATEX_HEADER: % ==============================================================
+#+LATEX_HEADER: % END SETUPFILE: latex-fonts.setup
+#+LATEX_HEADER: % ==============================================================
