@@ -191,6 +191,20 @@
 #+LATEX_HEADER:   sensitive=true,
 #+LATEX_HEADER: }
 #+LATEX_HEADER:
+#+LATEX_HEADER: % --------------------------------------------------------------
+#+LATEX_HEADER: % Accessibility
+#+LATEX_HEADER: % Hide line numbers from copy/paste operations in PDF output.
+#+LATEX_HEADER: % --------------------------------------------------------------
+#+LATEX_HEADER: \usepackage{accsupp}
+#+LATEX_HEADER:
+#+LATEX_HEADER: \newcommand{\emptyaccsupp}[1]{%
+#+LATEX_HEADER:   \BeginAccSupp{ActualText={}}#1\EndAccSupp{}%
+#+LATEX_HEADER: }
+#+LATEX_HEADER:
+#+LATEX_HEADER: \newcommand{\lstnumberstyle}{%
+#+LATEX_HEADER:   \tiny\ttfamily\emptyaccsupp
+#+LATEX_HEADER: }
+#+LATEX_HEADER:
 #+LATEX_HEADER: \lstset{%
 #+LATEX_HEADER:   lineskip=-0.1em,
 #+LATEX_HEADER:   %
@@ -210,8 +224,8 @@
 #+LATEX_HEADER:   showstringspaces=false, % underline spaces within strings
 #+LATEX_HEADER:   %
 #+LATEX_HEADER:   numbers=left, % where to put the line numbers
-#+LATEX_HEADER:   stepnumber=0, % step between two line numbers
-#+LATEX_HEADER:   numberstyle=\tiny, % line number font size
+# #+LATEX_HEADER:   stepnumber=0, % do not display line numbers
+#+LATEX_HEADER:   numberstyle=\lstnumberstyle, % line number font size
 #+LATEX_HEADER:   %
 #+LATEX_HEADER:   captionpos=b, % set the caption position to `bottom'
 #+LATEX_HEADER:   %
