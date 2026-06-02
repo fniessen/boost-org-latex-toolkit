@@ -133,6 +133,7 @@
 #+LATEX_HEADER:     incoming,
 #+LATEX_HEADER:     init-repository,
 #+LATEX_HEADER:     in,
+#+LATEX_HEADER:     lg-all-branches,
 #+LATEX_HEADER:     ll,
 #+LATEX_HEADER:     lll,
 #+LATEX_HEADER:     local-commit,
