@@ -183,9 +183,14 @@
 #+LATEX_HEADER:   % Treat lines starting with '#' as shell comments.
 #+LATEX_HEADER:   morecomment=[l]{\#},
 #+LATEX_HEADER:   %
-#+LATEX_HEADER:   % Treat '-', '.' and '/' as part of identifiers so compound Git names
-#+LATEX_HEADER:   % such as cherry-pick, force-with-lease and feature/login are highlighted
+#+LATEX_HEADER:   % Treat '.' and '/' as part of identifiers so compound Git names
+#+LATEX_HEADER:   % such as feature/login and path-like references are highlighted
 #+LATEX_HEADER:   % as single keywords.
+#+LATEX_HEADER:   %
+#+LATEX_HEADER:   % The '-' character is intentionally excluded. Including it in
+#+LATEX_HEADER:   % alsoletter would cause options beginning with '-' (for example
+#+LATEX_HEADER:   % -a, --all, --graph or --force-with-lease) to be parsed as part
+#+LATEX_HEADER:   % of larger identifiers and prevent correct option highlighting.
 #+LATEX_HEADER:   alsoletter={./},
 #+LATEX_HEADER:   sensitive=true,
 #+LATEX_HEADER: }
