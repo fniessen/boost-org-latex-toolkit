@@ -273,18 +273,18 @@
 #+LATEX_HEADER:   }
 #+LATEX_HEADER: }
 
-#+LATEX_HEADER: \NewTotalTCBox{\commandbox}{ s v }
+#+LATEX_HEADER: \NewTotalTCBox{\commandbox}{ s O{} v }
 #+LATEX_HEADER: {commandboxstyle, boxrule=0.3pt, colframe=black!45}
 #+LATEX_HEADER: {%
 #+LATEX_HEADER:   \IfBooleanT{#1}{\textcolor{red}{\ttfamily\bfseries \$ }}%
-#+LATEX_HEADER:   \lstinline[language=shell]§#2§%
+#+LATEX_HEADER:   \lstinline[language=shell,#2]§#3§%
 #+LATEX_HEADER: }
 
-#+LATEX_HEADER: \NewTotalTCBox{\lightcommandbox}{ s v }
+#+LATEX_HEADER: \NewTotalTCBox{\lightcommandbox}{ s O{} v }
 #+LATEX_HEADER: {commandboxstyle, boxrule=0pt, colframe=black!10}
 #+LATEX_HEADER: {%
 #+LATEX_HEADER:   \IfBooleanT{#1}{\textcolor{red}{\ttfamily\bfseries \$ }}%
-#+LATEX_HEADER:   \lstinline[language=shell]§#2§%
+#+LATEX_HEADER:   \lstinline[language=shell,#2]§#3§%
 #+LATEX_HEADER: }
 
 #+LATEX_HEADER: % ==============================================================
