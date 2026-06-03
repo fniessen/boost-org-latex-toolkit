@@ -248,51 +248,6 @@
 #+LATEX_HEADER:   escapechar=², % allow escaping to (La)TeX mode within ²..²
 #+LATEX_HEADER:   % The backquote was NOT judicious: in some code (comments), I wrap vars
 #+LATEX_HEADER:   % between such a backquote (`var')
-#+LATEX_HEADER:   %
-#+LATEX_HEADER:   % conversion of UTF-8 chars to latin1
-#+LATEX_HEADER:   literate=
-#+LATEX_HEADER:   {á}{{\'a}}1
-#+LATEX_HEADER:   {à}{{\`a}}1
-#+LATEX_HEADER:   {â}{{\^a}}1
-#+LATEX_HEADER:   {ä}{{\"a}}1
-#+LATEX_HEADER:   {ç}{{\c{c}}}1
-#+LATEX_HEADER:   {é}{{\'e}}1
-#+LATEX_HEADER:   {è}{{\`e}}1
-#+LATEX_HEADER:   {ê}{{\^e}}1
-#+LATEX_HEADER:   {ë}{{\"e}}1
-#+LATEX_HEADER:   {í}{{\'i}}1
-#+LATEX_HEADER:   {ì}{{\`i}}1
-#+LATEX_HEADER:   {î}{{\^i}}1
-#+LATEX_HEADER:   {ï}{{\"i}}1
-#+LATEX_HEADER:   {ó}{{\'o}}1
-#+LATEX_HEADER:   {ò}{{\`o}}1
-#+LATEX_HEADER:   {ô}{{\^o}}1
-#+LATEX_HEADER:   {ö}{{\"o}}1
-#+LATEX_HEADER:   {ú}{{\'u}}1
-#+LATEX_HEADER:   {ù}{{\`u}}1
-#+LATEX_HEADER:   {û}{{\^u}}1
-#+LATEX_HEADER:   {ü}{{\"u}}1
-#+LATEX_HEADER:   {Á}{{\'A}}1
-#+LATEX_HEADER:   {À}{{\`A}}1
-#+LATEX_HEADER:   {Â}{{\^A}}1
-#+LATEX_HEADER:   {Ä}{{\"A}}1
-#+LATEX_HEADER:   {Ç}{{\c{C}}}1
-#+LATEX_HEADER:   {É}{{\'E}}1
-#+LATEX_HEADER:   {È}{{\`E}}1
-#+LATEX_HEADER:   {Ê}{{\^E}}1
-#+LATEX_HEADER:   {Ë}{{\"E}}1
-#+LATEX_HEADER:   {Í}{{\'I}}1
-#+LATEX_HEADER:   {Ì}{{\`I}}1
-#+LATEX_HEADER:   {Î}{{\^I}}1
-#+LATEX_HEADER:   {Ï}{{\"I}}1
-#+LATEX_HEADER:   {Ó}{{\'O}}1
-#+LATEX_HEADER:   {Ò}{{\`O}}1
-#+LATEX_HEADER:   {Ô}{{\^O}}1
-#+LATEX_HEADER:   {Ö}{{\"O}}1
-#+LATEX_HEADER:   {Ú}{{\'U}}1
-#+LATEX_HEADER:   {Ù}{{\`U}}1
-#+LATEX_HEADER:   {Û}{{\^U}}1
-#+LATEX_HEADER:   {Ü}{{\"U}}1
 #+LATEX_HEADER: }
 #+LATEX_HEADER:
 #+LATEX_HEADER: \definecolor{TeXbackgroundcolor}{HTML}{F1F9EF}
