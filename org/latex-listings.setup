@@ -35,6 +35,9 @@
 #+LATEX_HEADER: \definecolor{TeXbackgroundcolor}{HTML}{F1F9EF}
 #+LATEX_HEADER: \definecolor{TeXrulecolor}{HTML}{D4E8E3}
 #+LATEX_HEADER:
+#+LATEX_HEADER: \definecolor{mc@examplebackground}{HTML}{EAF7EA}
+#+LATEX_HEADER: \definecolor{mc@exampleframe}{HTML}{A8D5A8}
+#+LATEX_HEADER:
 #+LATEX_HEADER: % --------------------------------------------------------------
 #+LATEX_HEADER: % Languages
 #+LATEX_HEADER: % --------------------------------------------------------------
@@ -210,6 +213,12 @@
 #+LATEX_HEADER: \lstdefinestyle{TeX}{
 #+LATEX_HEADER:   backgroundcolor=\color{TeXbackgroundcolor},
 #+LATEX_HEADER:   rulecolor=\color{TeXrulecolor}
+#+LATEX_HEADER: }
+#+LATEX_HEADER:
+#+LATEX_HEADER: \lstdefinestyle{example}{
+#+LATEX_HEADER:   language=shell, % text
+#+LATEX_HEADER:   backgroundcolor=\color{mc@examplebackground},
+#+LATEX_HEADER:   rulecolor=\color{mc@exampleframe}
 #+LATEX_HEADER: }
 #+LATEX_HEADER:
 #+LATEX_HEADER: % --------------------------------------------------------------
