@@ -62,7 +62,7 @@
 #+LATEX_HEADER:     \end{frame}%
 #+LATEX_HEADER:   }
 #+LATEX_HEADER:
-#+LATEX_HEADER:   % Agenda frame at section start.
+#+LATEX_HEADER:  % Agenda frame at section start.
 #+LATEX_HEADER:  \AtBeginSection{%
 #+LATEX_HEADER:    \begin{frame}[plain,]
 #+LATEX_HEADER:      \frametitle{Plan}
@@ -73,7 +73,7 @@
 #+LATEX_HEADER:      ]%
 #+LATEX_HEADER:    \end{frame}
 #+LATEX_HEADER:  }
-#+LATEX_HEADER:   % Agenda frame at subsection start.
+#+LATEX_HEADER:  % Agenda frame at subsection start.
 #+LATEX_HEADER:  \AtBeginSubsection[]{%
 #+LATEX_HEADER:    \begin{frame}[plain]
 #+LATEX_HEADER:      \small
@@ -84,6 +84,7 @@
 #+LATEX_HEADER:        subsubsectionstyle=show/hide
 #+LATEX_HEADER:      ]
 #+LATEX_HEADER:    \end{frame}
+#+LATEX_HEADER:  }
 #+LATEX_HEADER: }{}
 #+LATEX_HEADER: \makeatother
 #+LATEX_HEADER:
