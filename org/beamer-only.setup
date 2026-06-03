@@ -13,9 +13,16 @@
 #+LATEX_HEADER: % --------------------------------------------------------------
 #+LATEX_HEADER: \makeatletter
 #+LATEX_HEADER: \@ifclassloaded{beamer}{%
+#+LATEX_HEADER:
+#+LATEX_HEADER:   % ------------------------------------------------------------
+#+LATEX_HEADER:   % Font theme
+#+LATEX_HEADER:   % ------------------------------------------------------------
 #+LATEX_HEADER:   % Respect fonts configured with fontspec.
 #+LATEX_HEADER:   \usefonttheme{professionalfonts}
 #+LATEX_HEADER:
+#+LATEX_HEADER:   % ------------------------------------------------------------
+#+LATEX_HEADER:   % Header and footer
+#+LATEX_HEADER:   % ------------------------------------------------------------
 #+LATEX_HEADER:   % Header with current section and subsection only.
 #+LATEX_HEADER:   \definecolor{SectionHeader}{RGB}{200,200,200}
 #+LATEX_HEADER:   \definecolor{SubsectionHeader}{RGB}{228,228,228}
@@ -30,20 +37,26 @@
 #+LATEX_HEADER:     }%
 #+LATEX_HEADER:   }
 #+LATEX_HEADER:
-#+LATEX_HEADER:   % Alert text styling.
-#+LATEX_HEADER:   \definecolor{AlertBlue}{HTML}{0969DA}
-#+LATEX_HEADER:   \setbeamercolor{alerted text}{fg=AlertBlue}
-#+LATEX_HEADER:   \setbeamerfont{alerted text}{series=\bfseries}
-#+LATEX_HEADER:
 #+LATEX_HEADER:   % Footer with frame number.
 #+LATEX_HEADER:   \setbeamertemplate{footline}[frame number]
 #+LATEX_HEADER:
 #+LATEX_HEADER:   % Hide Beamer navigation symbols.
 #+LATEX_HEADER:   \setbeamertemplate{navigation symbols}{}
 #+LATEX_HEADER:
+#+LATEX_HEADER:   % ------------------------------------------------------------
+#+LATEX_HEADER:   % Text and frame styling
+#+LATEX_HEADER:   % ------------------------------------------------------------
+#+LATEX_HEADER:   % Alert text styling.
+#+LATEX_HEADER:   \definecolor{AlertBlue}{HTML}{0969DA}
+#+LATEX_HEADER:   \setbeamercolor{alerted text}{fg=AlertBlue}
+#+LATEX_HEADER:   \setbeamerfont{alerted text}{series=\bfseries}
+#+LATEX_HEADER:
 #+LATEX_HEADER:   % Frame title continuation (avoid "(cont.)" on single frames).
 #+LATEX_HEADER:   \setbeamertemplate{frametitle continuation}[singleframecheck]
 #+LATEX_HEADER:
+#+LATEX_HEADER:   % ------------------------------------------------------------
+#+LATEX_HEADER:   % Overlays
+#+LATEX_HEADER:   % ------------------------------------------------------------
 #+LATEX_HEADER:   % Make slide content appear incrementally by default.
 #+LATEX_HEADER:   % Equivalent to adding <+-> to overlay-aware Beamer elements.
 #+LATEX_HEADER:   \beamerdefaultoverlayspecification{<+->}
@@ -64,6 +77,9 @@
 #+LATEX_HEADER:   }%
 #+LATEX_HEADER:   \ExplSyntaxOff
 #+LATEX_HEADER:
+#+LATEX_HEADER:   % ------------------------------------------------------------
+#+LATEX_HEADER:   % Index
+#+LATEX_HEADER:   % ------------------------------------------------------------
 #+LATEX_HEADER:   % Index spacing (used by texindy).
 #+LATEX_HEADER:   \providecommand\indexspace{\par \vskip 10\p@ \@plus5\p@ \@minus3\p@\relax}
 #+LATEX_HEADER:
@@ -82,6 +98,9 @@
 #+LATEX_HEADER:     \end{frame}%
 #+LATEX_HEADER:   }
 #+LATEX_HEADER:
+#+LATEX_HEADER:   % ------------------------------------------------------------
+#+LATEX_HEADER:   % Agenda frames
+#+LATEX_HEADER:   % ------------------------------------------------------------
 #+LATEX_HEADER:   % Agenda frame at section start.
 #+LATEX_HEADER:   \AtBeginSection{%
 #+LATEX_HEADER:     \begin{frame}[plain]
