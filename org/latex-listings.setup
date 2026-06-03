@@ -5,10 +5,13 @@
 #+LATEX_HEADER: % Purpose: Listings configuration for source code typesetting and syntax highlighting
 #+LATEX_HEADER: % Scope: LaTeX exports using the listings package; applies to Beamer and other classes
 #+LATEX_HEADER: % ==============================================================
-
+#+LATEX_HEADER:
 #+LATEX_HEADER: % typeset source code listings
 #+LATEX_HEADER: \usepackage{listings}
 #+LATEX_HEADER:
+#+LATEX_HEADER: % --------------------------------------------------------------
+#+LATEX_HEADER: % Colors
+#+LATEX_HEADER: % --------------------------------------------------------------
 #+LATEX_HEADER: \usepackage{xcolor}
 #+LATEX_HEADER: \definecolor{mc@lstidentifier}{HTML}{000000} % black
 #+LATEX_HEADER: \definecolor{mc@lstcomment}{HTML}{008200} % green
@@ -29,6 +32,9 @@
 #+LATEX_HEADER: \definecolor{mc@diffadded}{HTML}{008200}   % added lines
 #+LATEX_HEADER: \definecolor{mc@diffremoved}{HTML}{CC0000} % removed lines
 #+LATEX_HEADER:
+#+LATEX_HEADER: % --------------------------------------------------------------
+#+LATEX_HEADER: % Languages
+#+LATEX_HEADER: % --------------------------------------------------------------
 #+LATEX_HEADER: % diff language for listings
 #+LATEX_HEADER: \lstdefinelanguage{diff}{%
 #+LATEX_HEADER:   morecomment=[f][\color{mc@diffstart}]{@@},% hunk headers
@@ -212,6 +218,9 @@
 #+LATEX_HEADER:   \tiny\ttfamily\emptyaccsupp
 #+LATEX_HEADER: }
 #+LATEX_HEADER:
+#+LATEX_HEADER: % --------------------------------------------------------------
+#+LATEX_HEADER: % Global listings defaults
+#+LATEX_HEADER: % --------------------------------------------------------------
 #+LATEX_HEADER: \lstset{%
 #+LATEX_HEADER:   lineskip=-0.1em,
 #+LATEX_HEADER:   %
@@ -258,13 +267,13 @@
 #+LATEX_HEADER: \definecolor{TeXbackgroundcolor}{HTML}{F1F9EF}
 #+LATEX_HEADER: \definecolor{TeXrulecolor}{HTML}{D4E8E3}
 #+LATEX_HEADER: \lstdefinestyle{TeX}{backgroundcolor=\color{TeXbackgroundcolor},rulecolor=\color{TeXrulecolor}}
-
-#+LATEX_HEADER: % ==============================================================
+#+LATEX_HEADER:
+#+LATEX_HEADER: % --------------------------------------------------------------
 #+LATEX_HEADER: % Inline command boxes (used by Org macros ikbd / kbd)
 #+LATEX_HEADER: % Requires: listings + tcolorbox
-#+LATEX_HEADER: % ==============================================================
+#+LATEX_HEADER: % --------------------------------------------------------------
 #+LATEX_HEADER: \usepackage{tcolorbox}
-
+#+LATEX_HEADER:
 #+LATEX_HEADER: \tcbset{
 #+LATEX_HEADER:   commandboxstyle/.style={
 #+LATEX_HEADER:     on line,
@@ -277,21 +286,21 @@
 #+LATEX_HEADER:     colback=black!10
 #+LATEX_HEADER:   }
 #+LATEX_HEADER: }
-
+#+LATEX_HEADER:
 #+LATEX_HEADER: \NewTotalTCBox{\commandbox}{ s O{} v }
 #+LATEX_HEADER: {commandboxstyle, boxrule=0.3pt, colframe=black!45}
 #+LATEX_HEADER: {%
 #+LATEX_HEADER:   \IfBooleanT{#1}{\textcolor{red}{\ttfamily\bfseries \$ }}%
 #+LATEX_HEADER:   \lstinline[language=shell,#2]§#3§%
 #+LATEX_HEADER: }
-
+#+LATEX_HEADER:
 #+LATEX_HEADER: \NewTotalTCBox{\lightcommandbox}{ s O{} v }
 #+LATEX_HEADER: {commandboxstyle, boxrule=0pt, colframe=black!10}
 #+LATEX_HEADER: {%
 #+LATEX_HEADER:   \IfBooleanT{#1}{\textcolor{red}{\ttfamily\bfseries \$ }}%
 #+LATEX_HEADER:   \lstinline[language=shell,#2]§#3§%
 #+LATEX_HEADER: }
-
+#+LATEX_HEADER:
 #+LATEX_HEADER: % ==============================================================
 #+LATEX_HEADER: % END SETUPFILE: latex-listings.setup
 #+LATEX_HEADER: % ==============================================================
