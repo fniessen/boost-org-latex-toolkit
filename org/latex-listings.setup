@@ -32,6 +32,9 @@
 #+LATEX_HEADER: \definecolor{mc@diffadded}{HTML}{008200}   % added lines
 #+LATEX_HEADER: \definecolor{mc@diffremoved}{HTML}{CC0000} % removed lines
 #+LATEX_HEADER:
+#+LATEX_HEADER: \definecolor{TeXbackgroundcolor}{HTML}{F1F9EF}
+#+LATEX_HEADER: \definecolor{TeXrulecolor}{HTML}{D4E8E3}
+#+LATEX_HEADER:
 #+LATEX_HEADER: % --------------------------------------------------------------
 #+LATEX_HEADER: % Languages
 #+LATEX_HEADER: % --------------------------------------------------------------
@@ -202,6 +205,14 @@
 #+LATEX_HEADER: }
 #+LATEX_HEADER:
 #+LATEX_HEADER: % --------------------------------------------------------------
+#+LATEX_HEADER: % Styles
+#+LATEX_HEADER: % --------------------------------------------------------------
+#+LATEX_HEADER: \lstdefinestyle{TeX}{
+#+LATEX_HEADER:   backgroundcolor=\color{TeXbackgroundcolor},
+#+LATEX_HEADER:   rulecolor=\color{TeXrulecolor}
+#+LATEX_HEADER: }
+#+LATEX_HEADER:
+#+LATEX_HEADER: % --------------------------------------------------------------
 #+LATEX_HEADER: % Accessibility
 #+LATEX_HEADER: % Hide line numbers from copy/paste operations in PDF output.
 #+LATEX_HEADER: % --------------------------------------------------------------
@@ -263,10 +274,6 @@
 #+LATEX_HEADER:   % The backquote was NOT judicious: in some code (comments), I wrap vars
 #+LATEX_HEADER:   % between such a backquote (`var')
 #+LATEX_HEADER: }
-#+LATEX_HEADER:
-#+LATEX_HEADER: \definecolor{TeXbackgroundcolor}{HTML}{F1F9EF}
-#+LATEX_HEADER: \definecolor{TeXrulecolor}{HTML}{D4E8E3}
-#+LATEX_HEADER: \lstdefinestyle{TeX}{backgroundcolor=\color{TeXbackgroundcolor},rulecolor=\color{TeXrulecolor}}
 #+LATEX_HEADER:
 #+LATEX_HEADER: % --------------------------------------------------------------
 #+LATEX_HEADER: % Inline command boxes (used by Org macros ikbd / kbd)
