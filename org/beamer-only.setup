@@ -88,6 +88,8 @@
 #+LATEX_HEADER: }{}
 #+LATEX_HEADER: \makeatother
 #+LATEX_HEADER:
+#+LATEX_HEADER: % Make slide content appear incrementally by default.
+#+LATEX_HEADER: % Equivalent to adding <+-> to overlay-aware Beamer elements.
 #+LATEX_HEADER: \beamerdefaultoverlayspecification{<+->}
 #+LATEX_HEADER:
 #+LATEX_HEADER: % Starred version of \pause for pauses after lists (and some rarae other cases) when \beamerdefaultoverlayspecification{<+->}
