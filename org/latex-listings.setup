@@ -186,7 +186,7 @@
 #+LATEX_HEADER:   % Treat '-', '.' and '/' as part of identifiers so compound Git names
 #+LATEX_HEADER:   % such as cherry-pick, force-with-lease and feature/login are highlighted
 #+LATEX_HEADER:   % as single keywords.
-#+LATEX_HEADER:   alsoletter={-./},
+#+LATEX_HEADER:   alsoletter={./},
 #+LATEX_HEADER:   sensitive=true,
 #+LATEX_HEADER: }
 #+LATEX_HEADER:
