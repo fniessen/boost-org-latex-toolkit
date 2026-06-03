@@ -89,7 +89,20 @@
 #+LATEX_HEADER: \makeatother
 #+LATEX_HEADER:
 #+LATEX_HEADER: \beamerdefaultoverlayspecification{<+->}
-
+#+LATEX_HEADER:
+#+LATEX_HEADER: % Starred version of \pause for pauses after lists (and some rarae other cases) when \beamerdefaultoverlayspecification{<+->}
+#+LATEX_HEADER: \ExplSyntaxOn
+#+LATEX_HEADER: \AtBeginDocument{%
+#+LATEX_HEADER:   \NewCommandCopy\pause__orig\pause
+#+LATEX_HEADER:   \RenewDocumentCommand{\pause}{s O{} }
+#+LATEX_HEADER:   {
+#+LATEX_HEADER:     \IfBooleanTF {#1}
+#+LATEX_HEADER:     { \pause__orig[\thebeamerpauses] }
+#+LATEX_HEADER:     { \pause__orig[#2] }
+#+LATEX_HEADER:   }%
+#+LATEX_HEADER: }%
+#+LATEX_HEADER: \ExplSyntaxOff
+#+LATEX_HEADER:
 #+LATEX_HEADER: % ==============================================================
 #+LATEX_HEADER: % END SETUPFILE: beamer-only.setup
 #+LATEX_HEADER: % ==============================================================
