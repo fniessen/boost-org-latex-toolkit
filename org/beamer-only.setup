@@ -64,7 +64,7 @@
 #+LATEX_HEADER:
 #+LATEX_HEADER:   % Agenda frame at section start.
 #+LATEX_HEADER:   \AtBeginSection{%
-#+LATEX_HEADER:     \begin{frame}[plain,]
+#+LATEX_HEADER:     \begin{frame}[plain]
 #+LATEX_HEADER:       \frametitle{Plan}
 #+LATEX_HEADER:       \tableofcontents[
 #+LATEX_HEADER:         sectionstyle=show/shaded,
