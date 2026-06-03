@@ -75,6 +75,8 @@
 #+LATEX_HEADER:
 #+LATEX_HEADER: }{}
 #+LATEX_HEADER: \makeatother
+#+LATEX_HEADER:
+#+LATEX_HEADER: \beamerdefaultoverlayspecification{<+->}
 
 #+LATEX_HEADER: % ==============================================================
 #+LATEX_HEADER: % END SETUPFILE: beamer-only.setup
