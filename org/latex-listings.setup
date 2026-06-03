@@ -52,7 +52,7 @@
 #+LATEX_HEADER: \lstdefinelanguage{shell}{
 #+LATEX_HEADER:   % Generic shell commands.
 #+LATEX_HEADER:   morekeywords={
-#+LATEX_HEADER:     apt,cat,cd,cp,echo,git,grep,
+#+LATEX_HEADER:     apt,cat,cd,cp,echo,git,grep,g,
 #+LATEX_HEADER:     ls,mkdir,mv,pwd,rm,smerge,sudo,touch,wget
 #+LATEX_HEADER:   },
 #+LATEX_HEADER:   % Git commands and common Unix commands used with Git.
@@ -73,7 +73,7 @@
 #+LATEX_HEADER:     global,graph,hard,keep,
 #+LATEX_HEADER:     oneline,soft,source,
 #+LATEX_HEADER:     staged,stat,tags,track,
-#+LATEX_HEADER:     worktree
+#+LATEX_HEADER:     worktree,list
 #+LATEX_HEADER:   },
 #+LATEX_HEADER:   % Common Git references, example branch names and placeholders.
 #+LATEX_HEADER:   morekeywords=[4]{
