@@ -61,22 +61,6 @@
 #+LATEX_HEADER:   % Equivalent to adding <+-> to overlay-aware Beamer elements.
 #+LATEX_HEADER:   \beamerdefaultoverlayspecification{<+->}
 #+LATEX_HEADER:
-#+LATEX_HEADER:   % Add a starred form \pause* for use after lists, or in other cases
-#+LATEX_HEADER:   % where \beamerdefaultoverlayspecification{<+->} has already advanced
-#+LATEX_HEADER:   % the Beamer pause counter.  In that case, \pause* reuses the current
-#+LATEX_HEADER:   % overlay number instead of advancing to the next one.
-#+LATEX_HEADER:   \ExplSyntaxOn
-#+LATEX_HEADER:   \AtBeginDocument{%
-#+LATEX_HEADER:     \NewCommandCopy\pause__orig\pause
-#+LATEX_HEADER:     \RenewDocumentCommand{\pause}{s O{} }
-#+LATEX_HEADER:     {
-#+LATEX_HEADER:       \IfBooleanTF {#1}
-#+LATEX_HEADER:       { \pause__orig[\thebeamerpauses] }
-#+LATEX_HEADER:       { \pause__orig[#2] }
-#+LATEX_HEADER:     }%
-#+LATEX_HEADER:   }%
-#+LATEX_HEADER:   \ExplSyntaxOff
-#+LATEX_HEADER:
 #+LATEX_HEADER:   % ------------------------------------------------------------
 #+LATEX_HEADER:   % Index
 #+LATEX_HEADER:   % ------------------------------------------------------------
@@ -126,6 +110,22 @@
 #+LATEX_HEADER:   }
 #+LATEX_HEADER: }{}
 #+LATEX_HEADER: \makeatother
+#+LATEX_HEADER:
+#+LATEX_HEADER: % Add a starred form \pause* for use after lists, or in other cases
+#+LATEX_HEADER: % where \beamerdefaultoverlayspecification{<+->} has already advanced
+#+LATEX_HEADER: % the Beamer pause counter.  In that case, \pause* reuses the current
+#+LATEX_HEADER: % overlay number instead of advancing to the next one.
+#+LATEX_HEADER: \ExplSyntaxOn
+#+LATEX_HEADER: \AtBeginDocument{%
+#+LATEX_HEADER:   \NewCommandCopy\pause__orig\pause
+#+LATEX_HEADER:   \RenewDocumentCommand{\pause}{s O{} }
+#+LATEX_HEADER:   {
+#+LATEX_HEADER:     \IfBooleanTF {#1}
+#+LATEX_HEADER:     { \pause__orig[\thebeamerpauses] }
+#+LATEX_HEADER:     { \pause__orig[#2] }
+#+LATEX_HEADER:   }%
+#+LATEX_HEADER: }%
+#+LATEX_HEADER: \ExplSyntaxOff
 #+LATEX_HEADER:
 #+LATEX_HEADER: % ==============================================================
 #+LATEX_HEADER: % END SETUPFILE: beamer-only.setup
