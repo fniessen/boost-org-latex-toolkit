@@ -67,8 +67,8 @@
 #+LATEX_HEADER:
 #+LATEX_HEADER:   % Footnote visible only on the specified overlays.
 #+LATEX_HEADER:   % Example:
-#+LATEX_HEADER:   %   Text\vfootnote<2->{Appears from overlay 2 onward}
-#+LATEX_HEADER:   \newcommand<>{\vfootnote}[1]{%
+#+LATEX_HEADER:   %   Text\visfootnote<2->{Appears from overlay 2 onward}
+#+LATEX_HEADER:   \newcommand<>{\visfootnote}[1]{%
 #+LATEX_HEADER:     \visible#2{\footnote#2[frame]{#1}}%
 #+LATEX_HEADER:   }
 #+LATEX_HEADER:
