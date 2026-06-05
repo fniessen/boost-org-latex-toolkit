@@ -127,6 +127,8 @@
 #+LATEX_HEADER:     delete-remote-branch,
 #+LATEX_HEADER:     df,
 #+LATEX_HEADER:     dfc,
+#+LATEX_HEADER:     dt,
+#+LATEX_HEADER:     dtc,
 #+LATEX_HEADER:     file-history,
 #+LATEX_HEADER:     file-history-all-branches,
 #+LATEX_HEADER:     file-last-commit-all-local-branches,
