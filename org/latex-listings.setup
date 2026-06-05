@@ -219,8 +219,7 @@
 #+LATEX_HEADER:
 #+LATEX_HEADER: \lstdefinestyle{example}{
 #+LATEX_HEADER:   language=shell, % text
-#+LATEX_HEADER:   backgroundcolor=\color{mc@examplebackground},
-#+LATEX_HEADER:   rulecolor=\color{mc@exampleframe}
+#+LATEX_HEADER:   backgroundcolor={},
 #+LATEX_HEADER: }
 #+LATEX_HEADER:
 #+LATEX_HEADER: % --------------------------------------------------------------
@@ -317,6 +316,39 @@
 #+LATEX_HEADER: {%
 #+LATEX_HEADER:   \IfBooleanT{#1}{\textcolor{red}{\ttfamily\bfseries \$ }}%
 #+LATEX_HEADER:   \lstinline[language=shell,#2]§#3§%
+#+LATEX_HEADER: }
+#+LATEX_HEADER:
+#+LATEX_HEADER: \lstdefinestyle{terminal}{
+#+LATEX_HEADER:   language=shell, % text
+#+LATEX_HEADER:   backgroundcolor=,
+#+LATEX_HEADER:   frame=none,
+#+LATEX_HEADER:   numbers=none,
+#+LATEX_HEADER:   basicstyle=\small\ttfamily,
+#+LATEX_HEADER: }
+#+LATEX_HEADER:
+#+LATEX_HEADER: \newcommand{\prompt}{%
+#+LATEX_HEADER: \small\ttfamily\bfseries%
+#+LATEX_HEADER: \textcolor{cyan}{alice\textcolor{gray}{@}ubuntu}%
+#+LATEX_HEADER: \textcolor{gray}{:}%
+#+LATEX_HEADER: \textcolor{lime!50!black}{\~{}}%
+#+LATEX_HEADER: \textcolor{red!50}{\$}%
+#+LATEX_HEADER: }
+#+LATEX_HEADER:
+#+LATEX_HEADER: \tcbuselibrary{listings}
+#+LATEX_HEADER: \NewTCBListing{terminal}{ O{} }{%
+#+LATEX_HEADER:   colback=white,
+#+LATEX_HEADER:   colframe=gray!65!black,
+#+LATEX_HEADER:   size=fbox,
+#+LATEX_HEADER:   listing only,
+#+LATEX_HEADER:   listing options={
+#+LATEX_HEADER:     style=terminal,
+#+LATEX_HEADER:     language=shell,
+#+LATEX_HEADER:     escapeinside=£\ ,%$
+#+LATEX_HEADER:     escapebegin=\BeginAccSupp{ActualText={}}\prompt\EndAccSupp{},
+#+LATEX_HEADER:     escapeend=\BeginAccSupp{ActualText={}}\ \EndAccSupp{},
+#+LATEX_HEADER:     #1,
+#+LATEX_HEADER:   },
+#+LATEX_HEADER:   title={\textcolor{orange}{\Huge{$\bullet$}}{\textcolor{gray}{\Huge{$\bullet\bullet$}}}}
 #+LATEX_HEADER: }
 #+LATEX_HEADER:
 #+LATEX_HEADER: % ==============================================================
