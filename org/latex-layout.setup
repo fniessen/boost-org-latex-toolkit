@@ -18,6 +18,11 @@
 #+LATEX_HEADER:   \setlength{\parskip}{0pt}%
 #+LATEX_HEADER: }
 
+#+LATEX_HEADER: \AtBeginEnvironment{description}{%
+#+LATEX_HEADER:   \setlength{\itemsep}{0pt}%
+#+LATEX_HEADER:   \setlength{\parskip}{0pt}%
+#+LATEX_HEADER: }
+
 #+LATEX_HEADER: % ==============================================================
 #+LATEX_HEADER: % END SETUPFILE: latex-layout.setup
 #+LATEX_HEADER: % ==============================================================
