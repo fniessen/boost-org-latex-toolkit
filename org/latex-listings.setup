@@ -283,6 +283,9 @@
 #+LATEX_HEADER:   escapechar=², % allow escaping to (La)TeX mode within ²..²
 #+LATEX_HEADER:   % The backquote was NOT judicious: in some code (comments), I wrap vars
 #+LATEX_HEADER:   % between such a backquote (`var')
+#+LATEX_HEADER:   %
+#+LATEX_HEADER:   % Display placeholders between ⟨ and ⟩, in italic and in a specific color
+#+LATEX_HEADER:   moredelim=[s][\ttfamily\itshape\color{brown}]{⟨}{⟩},
 #+LATEX_HEADER: }
 #+LATEX_HEADER:
 #+LATEX_HEADER:  % Make some chars with unicode positions above 256 work with lualatex
