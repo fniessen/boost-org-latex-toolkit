@@ -301,6 +301,7 @@
 #+LATEX_HEADER:    ^^^^20ac^^^^0153^^^^0152% nouveau pour xetex
 #+LATEX_HEADER:    ^^^^27e8% ⟨
 #+LATEX_HEADER:    ^^^^27e9% ⟩
+#+LATEX_HEADER:    ^^^^2026% ...
 #+LATEX_HEADER:    ^^00}
 #+LATEX_HEADER:  \lst@RestoreCatcodes
 #+LATEX_HEADER:  \makeatother
