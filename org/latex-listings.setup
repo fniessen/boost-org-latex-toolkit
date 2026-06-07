@@ -268,7 +268,7 @@
 #+LATEX_HEADER:   %
 #+LATEX_HEADER:   xleftmargin=0.4em, % text to the right
 #+LATEX_HEADER:   xrightmargin=0.4em, % text to the left
-#+LATEX_HEADER:   breaklines=false, % don't break long lines of code
+#+LATEX_HEADER:   breaklines=true, % don't break long lines of code
 #+LATEX_HEADER:   %
 #+LATEX_HEADER:   frame=single, % add a frame around the code
 #+LATEX_HEADER:   framexleftmargin=0pt, % frame back to the left
