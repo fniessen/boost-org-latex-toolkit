@@ -105,7 +105,7 @@
 #+LATEX_HEADER:   },
 #+LATEX_HEADER:   % Short options.
 #+LATEX_HEADER:   morekeywords=[5]{
-#+LATEX_HEADER:     a,am,av,b,d,m,p,s,v
+#+LATEX_HEADER:     a,am,av,b,d,i,I,l,m,p,s,v
 #+LATEX_HEADER:   },
 #+LATEX_HEADER:   % GitBoost aliases.
 #+LATEX_HEADER:   morekeywords=[6]{
