@@ -16,14 +16,32 @@
 #+LATEX_HEADER: % Main sans-serif font used throughout the document.
 #+LATEX_HEADER: \setsansfont{KpSans}
 #+LATEX_HEADER:
-#+LATEX_HEADER: % Use the sans-serif font as the default document font.
+#+LATEX_HEADER: % Use the sans-serif font family as the document default.
 #+LATEX_HEADER: \renewcommand{\familydefault}{\sfdefault}
 #+LATEX_HEADER:
-#+LATEX_HEADER: % Monospaced font used for source code and terminal output.
+#+LATEX_HEADER: % Monospaced font used for source code and terminal sessions.
+#+LATEX_HEADER: % Disable contextual substitutions to avoid unwanted glyph
+#+LATEX_HEADER: % transformations in code examples.
 #+LATEX_HEADER: \defaultfontfeatures[\ttfamily]{Contextuals={}}
-#+LATEX_HEADER: \setmonofont[Scale=0.89]{Latin Modern Mono} % JuliaMono
-#+LATEX_HEADER: \setmonofont[Scale=0.89]{JuliaMono}
-
+#+LATEX_HEADER:
+#+LATEX_HEADER: % Prefer JuliaMono when available.
+#+LATEX_HEADER: % JuliaMono is designed for programming and provides excellent
+#+LATEX_HEADER: % support for Unicode symbols commonly found in source code.
+#+LATEX_HEADER: \IfFontExistsTF{JuliaMono}
+#+LATEX_HEADER:   {\setmonofont[Scale=0.89]{JuliaMono}}
+#+LATEX_HEADER:   {
+#+LATEX_HEADER:     % First fallback: DejaVu Sans Mono offers broad Unicode
+#+LATEX_HEADER:     % coverage and is commonly available on Linux systems.
+#+LATEX_HEADER:     \IfFontExistsTF{DejaVu Sans Mono}
+#+LATEX_HEADER:       {\setmonofont[Scale=0.89]{DejaVu Sans Mono}}
+#+LATEX_HEADER:       {
+#+LATEX_HEADER:         % Final fallback: Latin Modern Mono is bundled with
+#+LATEX_HEADER:         % virtually all TeX distributions and ensures that the
+#+LATEX_HEADER:         % document remains compilable everywhere.
+#+LATEX_HEADER:         \setmonofont[Scale=0.89]{Latin Modern Mono}
+#+LATEX_HEADER:       }
+#+LATEX_HEADER:   }
+#+LATEX_HEADER:
 #+LATEX_HEADER: % ==============================================================
 #+LATEX_HEADER: % END SETUPFILE: latex-fonts.setup
 #+LATEX_HEADER: % ==============================================================
