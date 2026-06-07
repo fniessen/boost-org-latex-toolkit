@@ -281,22 +281,8 @@
 #+LATEX_HEADER:   %
 #+LATEX_HEADER:   % mathescape, % allow escaping to (La)TeX mode within $..$
 #+LATEX_HEADER:   %
-<<<<<<< HEAD
-#+LATEX_HEADER:   % Allow explicit escapes from listings back to LaTeX.
-#+LATEX_HEADER:   % The escape delimiter must be rare in source code examples.
-#+LATEX_HEADER:   % We use ² instead of backquote because backquotes often appear
-#+LATEX_HEADER:   % in comments or around identifiers, for example `var`.
-#+LATEX_HEADER:   escapechar=²,
-#+LATEX_HEADER:   %
-#+LATEX_HEADER:   % Display placeholders between ⟨ and ⟩ in italic and brown.
-#+LATEX_HEADER:   moredelim=[s][\ttfamily\itshape\color{brown}]{⟨}{⟩},
-|   |   |   |   |   |   | parent of 7634d9a (Improve terminal environment) |
-#+LATEX_HEADER:   % Display placeholders between ⟨ and ⟩, in italic and in a specific color
-#+LATEX_HEADER:   moredelim=[s][\ttfamily\itshape\color{brown}]{⟨}{⟩},
-=======
 #+LATEX_HEADER:   % Display placeholders between ⟨ and ⟩, in italic and in a specific color
 #+LATEX_HEADER:   moredelim={[s][\itshape\color{brown}]{⟨}{⟩}},
->>>>>>> 7634d9a (Improve terminal environment)
 #+LATEX_HEADER: }
 #+LATEX_HEADER:
 #+LATEX_HEADER:  % Make some chars with unicode positions above 256 work with lualatex
