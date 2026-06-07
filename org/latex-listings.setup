@@ -281,6 +281,7 @@
 #+LATEX_HEADER:   %
 #+LATEX_HEADER:   % mathescape, % allow escaping to (La)TeX mode within $..$
 #+LATEX_HEADER:   %
+<<<<<<< HEAD
 #+LATEX_HEADER:   % Allow explicit escapes from listings back to LaTeX.
 #+LATEX_HEADER:   % The escape delimiter must be rare in source code examples.
 #+LATEX_HEADER:   % We use ² instead of backquote because backquotes often appear
@@ -289,6 +290,13 @@
 #+LATEX_HEADER:   %
 #+LATEX_HEADER:   % Display placeholders between ⟨ and ⟩ in italic and brown.
 #+LATEX_HEADER:   moredelim=[s][\ttfamily\itshape\color{brown}]{⟨}{⟩},
+|   |   |   |   |   |   | parent of 7634d9a (Improve terminal environment) |
+#+LATEX_HEADER:   % Display placeholders between ⟨ and ⟩, in italic and in a specific color
+#+LATEX_HEADER:   moredelim=[s][\ttfamily\itshape\color{brown}]{⟨}{⟩},
+=======
+#+LATEX_HEADER:   % Display placeholders between ⟨ and ⟩, in italic and in a specific color
+#+LATEX_HEADER:   moredelim={[s][\itshape\color{brown}]{⟨}{⟩}},
+>>>>>>> 7634d9a (Improve terminal environment)
 #+LATEX_HEADER: }
 #+LATEX_HEADER:
 #+LATEX_HEADER:  % Make some chars with unicode positions above 256 work with lualatex
@@ -354,12 +362,13 @@
 #+LATEX_HEADER:   backgroundcolor=,
 #+LATEX_HEADER:   frame=none,
 #+LATEX_HEADER:   numbers=none,
-#+LATEX_HEADER:   basicstyle=\small\ttfamily,
+#+LATEX_HEADER:   basicstyle=\scriptsize\ttfamily,
+#+LATEX_HEADER:   moredelim={[s][\itshape\color{brown}]{⟨}{⟩}},
 #+LATEX_HEADER: }
 #+LATEX_HEADER:
 #+LATEX_HEADER: % Prompt displayed at the beginning of each command line.
 #+LATEX_HEADER: \newcommand{\terminalprompt}{%
-#+LATEX_HEADER:   \small\ttfamily\bfseries%
+#+LATEX_HEADER:   \bfseries%
 #+LATEX_HEADER:   \textcolor{cyan}{alice\textcolor{gray}{@}ubuntu}%
 #+LATEX_HEADER:   \textcolor{gray}{:}%
 #+LATEX_HEADER:   \textcolor{lime!50!black}{\~{}}%
@@ -370,19 +379,23 @@
 #+LATEX_HEADER:
 #+LATEX_HEADER: % Terminal environment used by Org's #+begin_terminal blocks.
 #+LATEX_HEADER: \NewTCBListing{terminal}{ O{} }{%
-#+LATEX_HEADER:   colback=white,
+#+LATEX_HEADER:   colback=violet!10!white,,
 #+LATEX_HEADER:   colframe=gray!65!black,
 #+LATEX_HEADER:   size=fbox,
 #+LATEX_HEADER:   listing only,
 #+LATEX_HEADER:   listing options={
-#+LATEX_HEADER:     style=terminal,
 #+LATEX_HEADER:     language=shell,
+#+LATEX_HEADER:     style=terminal,
 #+LATEX_HEADER:     escapeinside=£\ ,%$
 #+LATEX_HEADER:     escapebegin=\BeginAccSupp{ActualText={}}\terminalprompt\EndAccSupp{},
 #+LATEX_HEADER:     escapeend=\BeginAccSupp{ActualText={}}\ \EndAccSupp{},
 #+LATEX_HEADER:     #1,
 #+LATEX_HEADER:   },
-#+LATEX_HEADER:   title={\textcolor{orange}{\Huge{$\bullet$}}{\textcolor{gray}{\Huge{$\bullet\bullet$}}}}
+#+LATEX_HEADER:   title={%
+#+LATEX_HEADER:     \BeginAccSupp{ActualText={}}%
+#+LATEX_HEADER:     \textcolor{orange}{\Huge{$\bullet$}}{\textcolor{gray}{\Huge{$\bullet\bullet$}}}%
+#+LATEX_HEADER:     \EndAccSupp{}%
+#+LATEX_HEADER:   }%
 #+LATEX_HEADER: }
 #+LATEX_HEADER:
 #+LATEX_HEADER: % ==============================================================
