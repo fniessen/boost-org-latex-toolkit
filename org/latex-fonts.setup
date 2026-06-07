@@ -28,12 +28,12 @@
 #+LATEX_HEADER: % JuliaMono is designed for programming and provides excellent
 #+LATEX_HEADER: % support for Unicode symbols commonly found in source code.
 #+LATEX_HEADER: \IfFontExistsTF{JuliaMono}
-#+LATEX_HEADER:   {\setmonofont[Scale=0.89]{JuliaMono}}
+#+LATEX_HEADER:   {\setmonofont[Scale=0.79]{JuliaMono}}
 #+LATEX_HEADER:   {
 #+LATEX_HEADER:     % First fallback: DejaVu Sans Mono offers broad Unicode
 #+LATEX_HEADER:     % coverage and is commonly available on Linux systems.
 #+LATEX_HEADER:     \IfFontExistsTF{DejaVu Sans Mono}
-#+LATEX_HEADER:       {\setmonofont[Scale=0.89]{DejaVu Sans Mono}}
+#+LATEX_HEADER:       {\setmonofont[Scale=0.79]{DejaVu Sans Mono}}
 #+LATEX_HEADER:       {
 #+LATEX_HEADER:         % Final fallback: Latin Modern Mono is bundled with
 #+LATEX_HEADER:         % virtually all TeX distributions and ensures that the
