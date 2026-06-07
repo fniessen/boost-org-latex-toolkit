@@ -341,6 +341,11 @@
 #+LATEX_HEADER:   \lstinline[language=shell,#2]§#3§%
 #+LATEX_HEADER: }
 #+LATEX_HEADER:
+#+LATEX_HEADER: % --------------------------------------------------------------
+#+LATEX_HEADER: % Terminal sessions
+#+LATEX_HEADER: % Requires: listings + tcolorbox + accsupp
+#+LATEX_HEADER: % --------------------------------------------------------------
+#+LATEX_HEADER: % Style used for shell sessions displayed in a terminal-like box.
 #+LATEX_HEADER: \lstdefinestyle{terminal}{
 #+LATEX_HEADER:   language=shell, % text
 #+LATEX_HEADER:   backgroundcolor=,
@@ -349,15 +354,18 @@
 #+LATEX_HEADER:   basicstyle=\small\ttfamily,
 #+LATEX_HEADER: }
 #+LATEX_HEADER:
-#+LATEX_HEADER: \newcommand{\prompt}{%
-#+LATEX_HEADER: \small\ttfamily\bfseries%
-#+LATEX_HEADER: \textcolor{cyan}{alice\textcolor{gray}{@}ubuntu}%
-#+LATEX_HEADER: \textcolor{gray}{:}%
-#+LATEX_HEADER: \textcolor{lime!50!black}{\~{}}%
-#+LATEX_HEADER: \textcolor{red!50}{\$}%
+#+LATEX_HEADER: % Prompt displayed at the beginning of each command line.
+#+LATEX_HEADER: \newcommand{\terminalprompt}{%
+#+LATEX_HEADER:   \small\ttfamily\bfseries%
+#+LATEX_HEADER:   \textcolor{cyan}{alice\textcolor{gray}{@}ubuntu}%
+#+LATEX_HEADER:   \textcolor{gray}{:}%
+#+LATEX_HEADER:   \textcolor{lime!50!black}{\~{}}%
+#+LATEX_HEADER:   \textcolor{red!50}{\$}%
 #+LATEX_HEADER: }
 #+LATEX_HEADER:
 #+LATEX_HEADER: \tcbuselibrary{listings}
+#+LATEX_HEADER:
+#+LATEX_HEADER: % Terminal environment used by Org's #+begin_terminal blocks.
 #+LATEX_HEADER: \NewTCBListing{terminal}{ O{} }{%
 #+LATEX_HEADER:   colback=white,
 #+LATEX_HEADER:   colframe=gray!65!black,
@@ -367,7 +375,7 @@
 #+LATEX_HEADER:     style=terminal,
 #+LATEX_HEADER:     language=shell,
 #+LATEX_HEADER:     escapeinside=£\ ,%$
-#+LATEX_HEADER:     escapebegin=\BeginAccSupp{ActualText={}}\prompt\EndAccSupp{},
+#+LATEX_HEADER:     escapebegin=\BeginAccSupp{ActualText={}}\terminalprompt\EndAccSupp{},
 #+LATEX_HEADER:     escapeend=\BeginAccSupp{ActualText={}}\ \EndAccSupp{},
 #+LATEX_HEADER:     #1,
 #+LATEX_HEADER:   },
