@@ -64,7 +64,7 @@
 #+LATEX_HEADER: \lstdefinelanguage{shell}{
 #+LATEX_HEADER:   % Generic shell commands.
 #+LATEX_HEADER:   morekeywords={
-#+LATEX_HEADER:     apt,cat,cd,cp,echo,git,grep,g,
+#+LATEX_HEADER:     alias,apt,cat,cd,cp,echo,git,grep,g,
 #+LATEX_HEADER:     ls,mkdir,mv,pwd,rm,smerge,sudo,touch,wget
 #+LATEX_HEADER:   },
 #+LATEX_HEADER:   % Git commands and common Unix commands used with Git.
