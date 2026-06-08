@@ -188,7 +188,7 @@
 #+LATEX_HEADER:     wwflu
 #+LATEX_HEADER:   },
 #+LATEX_HEADER:   keywordstyle=[1]\color{mc@lstgitcmd}\bfseries,
-#+LATEX_HEADER:   keywordstyle=[2]\color{mc@lstgitsubcmd}\bfseries,
+#+LATEX_HEADER:   keywordstyle=[2]\color{mc@lstgitcmd}\bfseries,
 #+LATEX_HEADER:   keywordstyle=[3]\color{mc@lstgitopt},
 #+LATEX_HEADER:   keywordstyle=[4]\color{mc@lstgitref}\bfseries,
 #+LATEX_HEADER:   keywordstyle=[5]\color{mc@lstgitshortopt}\bfseries,
