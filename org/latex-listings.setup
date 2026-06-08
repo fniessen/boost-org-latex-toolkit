@@ -375,6 +375,7 @@
 #+LATEX_HEADER:   listing options={
 #+LATEX_HEADER:     language=shell,
 #+LATEX_HEADER:     style=terminal,
+#+LATEX_HEADER:     moredelim={[l][\color{black}]{\#\#}},
 #+LATEX_HEADER:     escapeinside=£\ ,%$
 #+LATEX_HEADER:     escapebegin=\BeginAccSupp{ActualText={}}\terminalprompt\EndAccSupp{},
 #+LATEX_HEADER:     escapeend=\BeginAccSupp{ActualText={}}\ \EndAccSupp{},
