@@ -64,7 +64,7 @@
 #+LATEX_HEADER: \lstdefinelanguage{shell}{
 #+LATEX_HEADER:   % Generic shell commands.
 #+LATEX_HEADER:   morekeywords={
-#+LATEX_HEADER:     alias,apt,cat,cd,cp,echo,git,grep,g,
+#+LATEX_HEADER:     alias,apt,cat,cd,cp,echo,git,grep,g,export,
 #+LATEX_HEADER:     ls,mkdir,mv,pwd,rm,smerge,sudo,touch,wget
 #+LATEX_HEADER:   },
 #+LATEX_HEADER:   % Git commands and common Unix commands used with Git.
@@ -347,6 +347,8 @@
 #+LATEX_HEADER: \lstdefinestyle{terminal}{
 #+LATEX_HEADER:   language=shell, % text
 #+LATEX_HEADER:   backgroundcolor=,
+#+LATEX_HEADER:   aboveskip=0pt,
+#+LATEX_HEADER:   belowskip=0pt,
 #+LATEX_HEADER:   frame=none,
 #+LATEX_HEADER:   numbers=none,
 #+LATEX_HEADER:   basicstyle=\scriptsize\ttfamily,
@@ -380,7 +382,7 @@
 #+LATEX_HEADER:   },
 #+LATEX_HEADER:   title={%
 #+LATEX_HEADER:     \BeginAccSupp{ActualText={}}%
-#+LATEX_HEADER:     \textcolor{orange}{\Huge{$\bullet$}}{\textcolor{gray}{\Huge{$\bullet\bullet$}}}%
+#+LATEX_HEADER:     \textcolor{orange}{\large{$\bullet$}}{\textcolor{gray}{\large{$\bullet\bullet$}}}%
 #+LATEX_HEADER:     \EndAccSupp{}%
 #+LATEX_HEADER:   }%
 #+LATEX_HEADER: }
