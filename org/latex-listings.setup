@@ -358,9 +358,9 @@
 #+LATEX_HEADER: % Prompt displayed at the beginning of each command line.
 #+LATEX_HEADER: \newcommand{\terminalprompt}{%
 #+LATEX_HEADER:   \bfseries%
-#+LATEX_HEADER:   \textcolor{cyan}{alice\textcolor{gray}{@}ubuntu}%
-#+LATEX_HEADER:   \textcolor{gray}{:}%
-#+LATEX_HEADER:   \textcolor{lime!50!black}{\~{}}%
+#+LATEX_HEADER:   % \textcolor{cyan}{alice\textcolor{gray}{@}ubuntu}%
+#+LATEX_HEADER:   % \textcolor{gray}{:}%
+#+LATEX_HEADER:   % \textcolor{lime!50!black}{\~{}}%
 #+LATEX_HEADER:   \textcolor{red!50}{\$}%
 #+LATEX_HEADER: }
 #+LATEX_HEADER:
