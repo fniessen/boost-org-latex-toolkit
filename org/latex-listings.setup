@@ -347,7 +347,6 @@
 #+LATEX_HEADER: \lstdefinestyle{terminal}{
 #+LATEX_HEADER:   language=shell, % text
 #+LATEX_HEADER:   backgroundcolor=,
-#+LATEX_HEADER:   aboveskip=0pt,
 #+LATEX_HEADER:   belowskip=0pt,
 #+LATEX_HEADER:   frame=none,
 #+LATEX_HEADER:   numbers=none,
