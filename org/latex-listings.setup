@@ -367,26 +367,23 @@
 #+LATEX_HEADER: \tcbuselibrary{listings}
 #+LATEX_HEADER:
 #+LATEX_HEADER: % Terminal environment used by Org's #+begin_terminal blocks.
-#+LATEX_HEADER: \NewTCBListing{terminal}{ O{} }{%
-#+LATEX_HEADER:   colback=violet!10!white,,
-#+LATEX_HEADER:   colframe=gray!65!black,
-#+LATEX_HEADER:   size=fbox,
-#+LATEX_HEADER:   listing only,
-#+LATEX_HEADER:   listing options={
+#+LATEX_HEADER: \lstnewenvironment{terminal}[1][]
+#+LATEX_HEADER: {%
+#+LATEX_HEADER:   \lstset{%
 #+LATEX_HEADER:     language=shell,
 #+LATEX_HEADER:     style=terminal,
+#+LATEX_HEADER:     frame=single,
+#+LATEX_HEADER:     basicstyle=\ttfamily\tiny,
 #+LATEX_HEADER:     moredelim={[l][\color{black}]{\#\#}},
-#+LATEX_HEADER:     escapeinside=£\ ,%$
-#+LATEX_HEADER:     escapebegin=\BeginAccSupp{ActualText={}}\terminalprompt\EndAccSupp{},
+#+LATEX_HEADER:     escapeinside=£\ ,
+#+LATEX_HEADER:     escapebegin=\BeginAccSupp{ActualText={}}\pause{}\terminalprompt\EndAccSupp{},
 #+LATEX_HEADER:     escapeend=\BeginAccSupp{ActualText={}}\ \EndAccSupp{},
-#+LATEX_HEADER:     #1,
-#+LATEX_HEADER:   },
-#+LATEX_HEADER:   title={%
-#+LATEX_HEADER:     \BeginAccSupp{ActualText={}}%
-#+LATEX_HEADER:     \textcolor{orange}{\large{$\bullet$}}{\textcolor{gray}{\large{$\bullet\bullet$}}}%
-#+LATEX_HEADER:     \EndAccSupp{}%
+#+LATEX_HEADER:     backgroundcolor=\color{violet!10!white},
+#+LATEX_HEADER:     rulecolor=\color{gray!65!black},
+#+LATEX_HEADER:     #1
 #+LATEX_HEADER:   }%
 #+LATEX_HEADER: }
+#+LATEX_HEADER: {}
 #+LATEX_HEADER:
 #+LATEX_HEADER: % ==============================================================
 #+LATEX_HEADER: % END SETUPFILE: latex-listings.setup
