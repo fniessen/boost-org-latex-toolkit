@@ -363,8 +363,7 @@
 #+LATEX_HEADER:   \lstset{%
 #+LATEX_HEADER:     language=shell,
 #+LATEX_HEADER:     style=terminal,
-#+LATEX_HEADER:     frame=single,
-#+LATEX_HEADER:     basicstyle=\ttfamily\tiny,
+#+LATEX_HEADER:     basicstyle=\ttfamily\scriptsize,
 #+LATEX_HEADER:     moredelim={[l][\color{black}]{\#\#}},
 #+LATEX_HEADER:     escapeinside=£\ ,
 #+LATEX_HEADER:     escapebegin=\BeginAccSupp{ActualText={}}\pause{}\terminalprompt\EndAccSupp{},
