@@ -94,10 +94,8 @@
 #+LATEX_HEADER:     origin,
 #+LATEX_HEADER:     origin/main,
 #+LATEX_HEADER:     origin/master,
-#+LATEX_HEADER:     origin/develop,
 #+LATEX_HEADER:     main,
 #+LATEX_HEADER:     master,
-#+LATEX_HEADER:     develop,
 #+LATEX_HEADER:     FILE,PATH/TO/FILE,
 #+LATEX_HEADER:     FICHIER,CHEMIN/VERS/FICHIER,
 #+LATEX_HEADER:     PATTERN,
@@ -347,7 +345,6 @@
 #+LATEX_HEADER: \lstdefinestyle{terminal}{
 #+LATEX_HEADER:   language=shell, % text
 #+LATEX_HEADER:   backgroundcolor=,
-#+LATEX_HEADER:   belowskip=0pt,
 #+LATEX_HEADER:   frame=none,
 #+LATEX_HEADER:   numbers=none,
 #+LATEX_HEADER:   basicstyle=\scriptsize\ttfamily,
