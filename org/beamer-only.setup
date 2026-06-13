@@ -96,6 +96,9 @@
 #+LATEX_HEADER:   % ------------------------------------------------------------
 #+LATEX_HEADER:   % Agenda frames
 #+LATEX_HEADER:   % ------------------------------------------------------------
+#+LATEX_HEADER:   \setbeamerfont{section in toc}{size=\footnotesize}
+#+LATEX_HEADER:   \setbeamerfont{subsection in toc}{size=\scriptsize}
+#+LATEX_HEADER:
 #+LATEX_HEADER:   % Agenda frame at section start.
 #+LATEX_HEADER:   \AtBeginSection{%
 #+LATEX_HEADER:     \begin{frame}[plain]
@@ -104,7 +107,7 @@
 #+LATEX_HEADER:         sectionstyle=show/shaded,
 #+LATEX_HEADER:         subsectionstyle=hide,
 #+LATEX_HEADER:         subsubsectionstyle=hide
-#+LATEX_HEADER:       ]%
+#+LATEX_HEADER:       ]
 #+LATEX_HEADER:     \end{frame}
 #+LATEX_HEADER:   }
 #+LATEX_HEADER:   % Agenda frame at subsection start.
