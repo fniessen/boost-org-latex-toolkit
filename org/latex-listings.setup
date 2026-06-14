@@ -80,12 +80,12 @@
 #+LATEX_HEADER:   },
 #+LATEX_HEADER:   % Git options and flags.
 #+LATEX_HEADER:   morekeywords=[3]{
-#+LATEX_HEADER:     abort,all,amend,cached,continue,
+#+LATEX_HEADER:     abort,abbrev-commit,all,amend,autostash,cached,continue,color-words,
 #+LATEX_HEADER:     decorate,follow,force-with-lease,
-#+LATEX_HEADER:     global,graph,hard,keep,
-#+LATEX_HEADER:     oneline,soft,source,
+#+LATEX_HEADER:     global,graph,hard,list,keep,mixed,name-only,pretty,prune,
+#+LATEX_HEADER:     rebase,oneline,soft,sort,source,
 #+LATEX_HEADER:     staged,stat,tags,track,
-#+LATEX_HEADER:     worktree,list
+#+LATEX_HEADER:     word-diff-regex,worktree,
 #+LATEX_HEADER:   },
 #+LATEX_HEADER:   % Common Git references, example branch names and placeholders.
 #+LATEX_HEADER:   morekeywords=[4]{
@@ -98,7 +98,7 @@
 #+LATEX_HEADER:   },
 #+LATEX_HEADER:   % Short options.
 #+LATEX_HEADER:   morekeywords=[5]{
-#+LATEX_HEADER:     a,am,av,b,d,i,I,l,m,p,s,v
+#+LATEX_HEADER:     a,am,av,b,d,i,I,l,m,p,s,v,vv
 #+LATEX_HEADER:   },
 #+LATEX_HEADER:   % GitBoost aliases.
 #+LATEX_HEADER:   morekeywords=[6]{
@@ -149,6 +149,7 @@
 #+LATEX_HEADER:     mindfc,
 #+LATEX_HEADER:     minshow,
 #+LATEX_HEADER:     missing,
+#+LATEX_HEADER:     no-ff,
 #+LATEX_HEADER:     out,
 #+LATEX_HEADER:     outgoing,
 #+LATEX_HEADER:     publish-branch,
