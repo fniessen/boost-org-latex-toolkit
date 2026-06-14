@@ -98,7 +98,7 @@
 #+LATEX_HEADER:   % ------------------------------------------------------------
 #+LATEX_HEADER:   % Agenda frame at section start.
 #+LATEX_HEADER:   \AtBeginSection{%
-#+LATEX_HEADER:     \begin{frame}[plain,allowframebreaks]
+#+LATEX_HEADER:     \begin{frame}[plain,shrink=30]
 #+LATEX_HEADER:       \frametitle{Plan}
 #+LATEX_HEADER:       \scriptsize
 #+LATEX_HEADER:       % Reduce top whitespace above the TOC.
@@ -112,7 +112,7 @@
 #+LATEX_HEADER:   }
 #+LATEX_HEADER:   % Agenda frame at subsection start.
 #+LATEX_HEADER:   \AtBeginSubsection[]{%
-#+LATEX_HEADER:     \begin{frame}[plain,allowframebreaks]
+#+LATEX_HEADER:     \begin{frame}[plain,shrink=30]
 #+LATEX_HEADER:       \small
 #+LATEX_HEADER:       \frametitle{Plan}
 #+LATEX_HEADER:       \tableofcontents[
