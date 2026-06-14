@@ -100,9 +100,6 @@
 #+LATEX_HEADER:   \AtBeginSection{%
 #+LATEX_HEADER:     \begin{frame}[plain,shrink=30]
 #+LATEX_HEADER:       \frametitle{Plan}
-#+LATEX_HEADER:       \scriptsize
-#+LATEX_HEADER:       % Reduce top whitespace above the TOC.
-#+LATEX_HEADER:       \vspace*{-2.0em}
 #+LATEX_HEADER:       \tableofcontents[
 #+LATEX_HEADER:         sectionstyle=show/shaded,
 #+LATEX_HEADER:         subsectionstyle=hide,
@@ -113,7 +110,6 @@
 #+LATEX_HEADER:   % Agenda frame at subsection start.
 #+LATEX_HEADER:   \AtBeginSubsection[]{%
 #+LATEX_HEADER:     \begin{frame}[plain,shrink=30]
-#+LATEX_HEADER:       \small
 #+LATEX_HEADER:       \frametitle{Plan}
 #+LATEX_HEADER:       \tableofcontents[
 #+LATEX_HEADER:         sectionstyle=show/hide,
