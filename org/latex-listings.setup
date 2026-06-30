@@ -2,8 +2,13 @@
 
 #+LATEX_HEADER: % ==============================================================
 #+LATEX_HEADER: % BEGIN SETUPFILE: latex-listings.setup
-#+LATEX_HEADER: % Purpose: Listings configuration for source code typesetting and syntax highlighting
-#+LATEX_HEADER: % Scope: LaTeX exports using the listings package; applies to Beamer and other classes
+#+LATEX_HEADER: %
+#+LATEX_HEADER: % Copyright (C) 2008-2026 Fabrice Niessen. All rights reserved.
+#+LATEX_HEADER: %
+#+LATEX_HEADER: % Purpose: Listings configuration for source code typesetting
+#+LATEX_HEADER: %          and syntax highlighting.
+#+LATEX_HEADER: % Scope:   LaTeX exports using the listings package;
+#+LATEX_HEADER: %          applies to Beamer and other document classes.
 #+LATEX_HEADER: % ==============================================================
 #+LATEX_HEADER:
 #+LATEX_HEADER: % typeset source code listings
@@ -287,26 +292,33 @@
 #+LATEX_HEADER:   moredelim={[s][\itshape\color{brown}]{⟨}{⟩}},
 #+LATEX_HEADER: }
 #+LATEX_HEADER:
-#+LATEX_HEADER:  % Make some chars with unicode positions above 256 work with lualatex
-#+LATEX_HEADER:  \makeatletter
-#+LATEX_HEADER:  \lst@InputCatcodes
-#+LATEX_HEADER:  \def\lst@DefEC{%
+#+LATEX_HEADER: % --------------------------------------------------------------
+#+LATEX_HEADER: % Unicode support for listings
+#+LATEX_HEADER: % --------------------------------------------------------------
+#+LATEX_HEADER: % Extend listings' internal character table to recognize Unicode
+#+LATEX_HEADER: % code points above 255. This allows characters such as ⟨, ⟩ and
+#+LATEX_HEADER: % ... to be processed correctly when using modern Unicode engines
+#+LATEX_HEADER: % (LuaLaTeX and XeLaTeX).
+#+LATEX_HEADER: \makeatletter
+#+LATEX_HEADER: \lst@InputCatcodes
+#+LATEX_HEADER: \def\lst@DefEC{%
 #+LATEX_HEADER:   \lst@CCECUse \lst@ProcessLetter
-#+LATEX_HEADER:    ^^80^^81^^82^^83^^84^^85^^86^^87^^88^^89^^8a^^8b^^8c^^8d^^8e^^8f%
-#+LATEX_HEADER:    ^^90^^91^^92^^93^^94^^95^^96^^97^^98^^99^^9a^^9b^^9c^^9d^^9e^^9f%
-#+LATEX_HEADER:    ^^a0^^a1^^a2^^a3^^a4^^a5^^a6^^a7^^a8^^a9^^aa^^ab^^ac^^ad^^ae^^af%
-#+LATEX_HEADER:    ^^b0^^b1^^b2^^b3^^b4^^b5^^b6^^b7^^b8^^b9^^ba^^bb^^bc^^bd^^be^^bf%
-#+LATEX_HEADER:    ^^c0^^c1^^c2^^c3^^c4^^c5^^c6^^c7^^c8^^c9^^ca^^cb^^cc^^cd^^ce^^cf%
-#+LATEX_HEADER:    ^^d0^^d1^^d2^^d3^^d4^^d5^^d6^^d7^^d8^^d9^^da^^db^^dc^^dd^^de^^df%
-#+LATEX_HEADER:    ^^e0^^e1^^e2^^e3^^e4^^e5^^e6^^e7^^e8^^e9^^ea^^eb^^ec^^ed^^ee^^ef%
-#+LATEX_HEADER:    ^^f0^^f1^^f2^^f3^^f4^^f5^^f6^^f7^^f8^^f9^^fa^^fb^^fc^^fd^^fe^^ff%
-#+LATEX_HEADER:    ^^^^20ac^^^^0153^^^^0152% nouveau pour xetex
-#+LATEX_HEADER:    ^^^^27e8% ⟨
-#+LATEX_HEADER:    ^^^^27e9% ⟩
-#+LATEX_HEADER:    ^^^^2026% ...
-#+LATEX_HEADER:    ^^00}
-#+LATEX_HEADER:  \lst@RestoreCatcodes
-#+LATEX_HEADER:  \makeatother
+#+LATEX_HEADER:   ^^80^^81^^82^^83^^84^^85^^86^^87^^88^^89^^8a^^8b^^8c^^8d^^8e^^8f%
+#+LATEX_HEADER:   ^^90^^91^^92^^93^^94^^95^^96^^97^^98^^99^^9a^^9b^^9c^^9d^^9e^^9f%
+#+LATEX_HEADER:   ^^a0^^a1^^a2^^a3^^a4^^a5^^a6^^a7^^a8^^a9^^aa^^ab^^ac^^ad^^ae^^af%
+#+LATEX_HEADER:   ^^b0^^b1^^b2^^b3^^b4^^b5^^b6^^b7^^b8^^b9^^ba^^bb^^bc^^bd^^be^^bf%
+#+LATEX_HEADER:   ^^c0^^c1^^c2^^c3^^c4^^c5^^c6^^c7^^c8^^c9^^ca^^cb^^cc^^cd^^ce^^cf%
+#+LATEX_HEADER:   ^^d0^^d1^^d2^^d3^^d4^^d5^^d6^^d7^^d8^^d9^^da^^db^^dc^^dd^^de^^df%
+#+LATEX_HEADER:   ^^e0^^e1^^e2^^e3^^e4^^e5^^e6^^e7^^e8^^e9^^ea^^eb^^ec^^ed^^ee^^ef%
+#+LATEX_HEADER:   ^^f0^^f1^^f2^^f3^^f4^^f5^^f6^^f7^^f8^^f9^^fa^^fb^^fc^^fd^^fe^^ff%
+#+LATEX_HEADER:   % Additional Unicode characters.
+#+LATEX_HEADER:   ^^^^20ac^^^^0153^^^^0152% €, œ, Œ
+#+LATEX_HEADER:   ^^^^27e8% ⟨
+#+LATEX_HEADER:   ^^^^27e9% ⟩
+#+LATEX_HEADER:   ^^^^2026% ...
+#+LATEX_HEADER:   ^^00}
+#+LATEX_HEADER: \lst@RestoreCatcodes
+#+LATEX_HEADER: \makeatother
 #+LATEX_HEADER:
 #+LATEX_HEADER: % --------------------------------------------------------------
 #+LATEX_HEADER: % Inline command boxes (used by Org macros ikbd / kbd)
