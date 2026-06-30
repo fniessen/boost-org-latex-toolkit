@@ -12,8 +12,8 @@ $pdf_mode = 4;
 # ---------------------------------------------------------
 
 # LuaLaTeX is the project's standard engine.
-# The pdflatex command is kept for convenience should the
-# engine be changed temporarily.
+# The pdflatex command is kept for convenience should the engine be changed
+# temporarily.
 $pdflatex = 'pdflatex -interaction=nonstopmode -halt-on-error %O %S';
 
 $lualatex = 'lualatex -interaction=nonstopmode -halt-on-error %O %S';
