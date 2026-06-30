@@ -36,8 +36,8 @@ $makeindex = 'xindex -l fr %O -o %D %S';
 # table of contents, bibliography, etc.
 $max_repeat = 5;
 
-# Set to 1 for quieter output.
-# Set to 0 for normal output.
+# Set to 1 to suppress most output (quiet mode).
+# Set to 0 to display full build output (default).
 $silent = 0;
 
 # ---------------------------------------------------------
