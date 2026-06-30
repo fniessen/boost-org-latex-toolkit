@@ -1,4 +1,4 @@
-# -*- mode: cperl; coding: utf-8; -*-
+# -*- mode: perl; coding: utf-8; -*-
 
 # =========================================================
 # latexmk configuration
@@ -11,6 +11,9 @@ $pdf_mode = 4;
 # PDF engines
 # ---------------------------------------------------------
 
+# LuaLaTeX is the project's standard engine.
+# The pdflatex command is kept for convenience should the
+# engine be changed temporarily.
 $pdflatex = 'pdflatex -interaction=nonstopmode -halt-on-error %O %S';
 
 $lualatex = 'lualatex -interaction=nonstopmode -halt-on-error %O %S';
@@ -46,15 +49,26 @@ $silent = 0;
 # Used by latexmk for dependency tracking.
 # ---------------------------------------------------------
 
-@generated_exts = (
-                   'aux', 'auxlock',
-                   'bbl', 'bcf', 'blg',
-                   'fdb_latexmk', 'fls', 'log',
-                   'idx', 'ilg', 'ind',
-                   'nav', 'out', 'run.xml',
-                   'snm', 'synctex.gz',
-                   'toc', 'vrb',
-                  );
+@generated_exts = qw(
+                      aux
+                      auxlock
+                      bbl
+                      bcf
+                      blg
+                      fdb_latexmk
+                      fls
+                      idx
+                      ilg
+                      ind
+                      log
+                      nav
+                      out
+                      run.xml
+                      snm
+                      synctex.gz
+                      toc
+                      vrb
+                   );
 
 # ---------------------------------------------------------
 # Cleaning behaviour
@@ -62,30 +76,9 @@ $silent = 0;
 #   latexmk -c  : remove auxiliary files
 #   latexmk -C  : remove auxiliary files more aggressively
 #
-# Add additional extensions here if your workflow generates extra auxiliary
-# files.
+# The cleaning extensions are derived from the generated extensions to keep
+# a single source of truth.
 # ---------------------------------------------------------
 
-$clean_ext = join ' ', qw(
-                           aux
-                           auxlock
-                           bbl
-                           bcf
-                           blg
-                           fdb_latexmk
-                           fls
-                           idx
-                           ilg
-                           ind
-                           log
-                           nav
-                           out
-                           run.xml
-                           snm
-                           synctex.gz
-                           toc
-                           vrb
-                        );
-
-# For this project, use the same list for a full clean.
+$clean_ext      = join ' ', @generated_exts;
 $clean_full_ext = $clean_ext;
