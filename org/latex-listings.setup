@@ -19,29 +19,29 @@
 #+LATEX_HEADER: % --------------------------------------------------------------
 #+LATEX_HEADER: \usepackage{xcolor}
 #+LATEX_HEADER: \definecolor{mc@lstidentifier}{HTML}{000000} % black
-#+LATEX_HEADER: \definecolor{mc@lstcomment}{HTML}{008200} % green
-#+LATEX_HEADER: \definecolor{mc@lststring}{HTML}{FF5500} % orange
-#+LATEX_HEADER: \definecolor{mc@lstkeyword}{HTML}{0000FF} % blue
+#+LATEX_HEADER: \definecolor{mc@lstcomment}{HTML}{008200}    % green
+#+LATEX_HEADER: \definecolor{mc@lststring}{HTML}{FF5500}     % orange
+#+LATEX_HEADER: \definecolor{mc@lstkeyword}{HTML}{0000FF}    % blue
 #+LATEX_HEADER: \definecolor{mc@lstbackground}{HTML}{FFFFCC} % light yellow
-#+LATEX_HEADER: \definecolor{mc@lstframe}{HTML}{FFEE88} % dark yellow
+#+LATEX_HEADER: \definecolor{mc@lstframe}{HTML}{FFEE88}      % pale yellow
 #+LATEX_HEADER:
-#+LATEX_HEADER: \definecolor{mc@lstgitcmd}{HTML}{0000FF}      % bleu : git, cd, ls...
-#+LATEX_HEADER: \definecolor{mc@lstgitsubcmd}{HTML}{008080}   % turquoise : commit, log, merge...
-#+LATEX_HEADER: \definecolor{mc@lstgitopt}{HTML}{CC5500}      % orange foncé : --graph, --oneline, --cached...
-#+LATEX_HEADER: \definecolor{mc@lstgitref}{HTML}{008200}      % vert : HEAD
-#+LATEX_HEADER: \definecolor{mc@lstgitshortopt}{HTML}{AA0000} % rouge foncé : a, p, v, m, am...
-#+LATEX_HEADER: \definecolor{mc@lstgboost}{HTML}{9900CC}      % violet : alias GitBoost (st, co, ll, reword, br...)
+#+LATEX_HEADER: \definecolor{mc@lstgitcmd}{HTML}{0000FF}      % blue: git, cd, ls...
+#+LATEX_HEADER: \definecolor{mc@lstgitsubcmd}{HTML}{008080}   % teal: commit, log, merge...
+#+LATEX_HEADER: \definecolor{mc@lstgitopt}{HTML}{CC5500}      % dark orange: graph, oneline, cached...
+#+LATEX_HEADER: \definecolor{mc@lstgitref}{HTML}{008200}      % green: HEAD, origin/main...
+#+LATEX_HEADER: \definecolor{mc@lstgitshortopt}{HTML}{AA0000} % dark red: a, p, v, m, am...
+#+LATEX_HEADER: \definecolor{mc@lstgboost}{HTML}{9900CC}      % purple: GitBoost aliases
 #+LATEX_HEADER:
-#+LATEX_HEADER: % colors for diff listings
-#+LATEX_HEADER: \definecolor{mc@diffstart}{HTML}{666666}   % headers, hunks
-#+LATEX_HEADER: \definecolor{mc@diffadded}{HTML}{008200}   % added lines
-#+LATEX_HEADER: \definecolor{mc@diffremoved}{HTML}{CC0000} % removed lines
+#+LATEX_HEADER: % Colors for diff listings.
+#+LATEX_HEADER: \definecolor{mc@diffstart}{HTML}{666666}   % gray
+#+LATEX_HEADER: \definecolor{mc@diffadded}{HTML}{008200}   % green
+#+LATEX_HEADER: \definecolor{mc@diffremoved}{HTML}{CC0000} % red
 #+LATEX_HEADER:
-#+LATEX_HEADER: \definecolor{TeXbackgroundcolor}{HTML}{F1F9EF}
-#+LATEX_HEADER: \definecolor{TeXrulecolor}{HTML}{D4E8E3}
+#+LATEX_HEADER: \definecolor{TeXbackgroundcolor}{HTML}{F1F9EF} % very light green
+#+LATEX_HEADER: \definecolor{TeXrulecolor}{HTML}{D4E8E3}       % pale green
 #+LATEX_HEADER:
-#+LATEX_HEADER: \definecolor{mc@examplebackground}{HTML}{EAF7EA}
-#+LATEX_HEADER: \definecolor{mc@exampleframe}{HTML}{A8D5A8}
+#+LATEX_HEADER: \definecolor{mc@examplebackground}{HTML}{EAF7EA} % very light green
+#+LATEX_HEADER: \definecolor{mc@exampleframe}{HTML}{A8D5A8}      % light green
 #+LATEX_HEADER:
 #+LATEX_HEADER: % --------------------------------------------------------------
 #+LATEX_HEADER: % Languages
