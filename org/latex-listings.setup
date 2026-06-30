@@ -11,7 +11,7 @@
 #+LATEX_HEADER: %          applies to Beamer and other document classes.
 #+LATEX_HEADER: % ==============================================================
 #+LATEX_HEADER:
-#+LATEX_HEADER: % typeset source code listings
+#+LATEX_HEADER: % Typeset source code listings.
 #+LATEX_HEADER: \usepackage{listings}
 #+LATEX_HEADER:
 #+LATEX_HEADER: % --------------------------------------------------------------
@@ -46,7 +46,7 @@
 #+LATEX_HEADER: % --------------------------------------------------------------
 #+LATEX_HEADER: % Languages
 #+LATEX_HEADER: % --------------------------------------------------------------
-#+LATEX_HEADER: % diff language for listings
+#+LATEX_HEADER: % Diff language for listings.
 #+LATEX_HEADER: \lstdefinelanguage{diff}{%
 #+LATEX_HEADER:   morecomment=[f][\color{mc@diffstart}]{@@},% hunk headers
 #+LATEX_HEADER:   morecomment=[f][\color{mc@diffremoved}]-,% removed lines
@@ -55,7 +55,7 @@
 #+LATEX_HEADER:   morecomment=[f][\color{mc@diffstart}]{+++},% file headers (new)
 #+LATEX_HEADER: }
 #+LATEX_HEADER:
-#+LATEX_HEADER: % plain text language for listings
+#+LATEX_HEADER: % Plain text language for listings.
 #+LATEX_HEADER: \lstdefinelanguage{text}{}
 #+LATEX_HEADER:
 #+LATEX_HEADER: \lstdefinelanguage{org}{%
@@ -288,7 +288,7 @@
 #+LATEX_HEADER:   %
 #+LATEX_HEADER:   % mathescape, % allow escaping to (La)TeX mode within $..$
 #+LATEX_HEADER:   %
-#+LATEX_HEADER:   % Display placeholders between ⟨ and ⟩, in italic and in a specific color
+#+LATEX_HEADER:   % Display placeholders between ⟨ and ⟩, in italic and in a specific color.
 #+LATEX_HEADER:   moredelim={[s][\itshape\color{brown}]{⟨}{⟩}},
 #+LATEX_HEADER: }
 #+LATEX_HEADER:
