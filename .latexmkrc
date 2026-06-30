@@ -1,9 +1,11 @@
+# -*- mode: cperl; coding: utf-8; -*-
+
 # =========================================================
 # Latexmk configuration
 # =========================================================
 
-# Produce PDF directly (PDF mode).
-$pdf_mode = 1;     
+# Generate the PDF directly (PDF mode) using LuaLaTeX.
+$pdf_mode = 4;
 
 # ---------------------------------------------------------
 # PDF engines
@@ -17,20 +19,26 @@ $lualatex = 'lualatex -interaction=nonstopmode -halt-on-error %O %S';
 $xelatex  = '';
 
 # ---------------------------------------------------------
-# Index generation: texindy (French, UTF-8)
+# Index generation
 # ---------------------------------------------------------
 
-$makeindex = 'texindy -L french -C utf8 %O -o %D %S';
+# Previous implementation using texindy:
+# $makeindex = 'texindy -L french -C utf8 %O -o %D %S';
+
+# Current implementation using xindex (French).
+$makeindex = 'xindex -l fr %S';
 
 # ---------------------------------------------------------
 # General build settings
 # ---------------------------------------------------------
 
-# Maximum number of runs.
+# Maximum number of compilation runs performed to resolve cross-references,
+# table of contents, bibliography, etc.
 $max_repeat = 5;
 
-# Set to 1 for quieter output.
-$silent     = 0;    
+# Set to 1 to reduce latexmk output (quiet mode).
+# Set to 0 for normal output.
+$silent = 0;
 
 # ---------------------------------------------------------
 # List of generated extensions (for dependency tracking)
