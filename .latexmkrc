@@ -71,7 +71,7 @@ $silent = 0;
                    );
 
 # ---------------------------------------------------------
-# Cleaning behaviour
+# Cleaning behavior
 #
 #   latexmk -c  : remove auxiliary files
 #   latexmk -C  : remove auxiliary files more aggressively
