@@ -65,6 +65,14 @@
 #+LATEX_HEADER:   morecomment=[l]{\#},
 #+LATEX_HEADER: }
 #+LATEX_HEADER:
+# #+LATEX_HEADER: % A new language must be defined before being loaded.
+# #+LATEX_HEADER: \lstloadlanguages{%
+# #+LATEX_HEADER:   C,
+# #+LATEX_HEADER:   Java,
+# #+LATEX_HEADER:   Python,
+# #+LATEX_HEADER:   R
+# #+LATEX_HEADER: }
+# #+LATEX_HEADER:
 #+LATEX_HEADER: % Shell commands with Git-aware highlighting.
 #+LATEX_HEADER: \lstdefinelanguage{shell}{
 #+LATEX_HEADER:   % Generic shell commands and local command aliases.
@@ -287,6 +295,7 @@
 #+LATEX_HEADER:   keepspaces=true, % don't drop spaces to fix column alignment
 #+LATEX_HEADER:   %
 #+LATEX_HEADER:   % mathescape, % allow escaping to (La)TeX mode within $..$
+# #+LATEX_HEADER:   escapechar=², % allow escaping to (La)TeX mode within ²..²
 #+LATEX_HEADER:   %
 #+LATEX_HEADER:   % Display placeholders between ⟨ and ⟩, in italic and in a specific color.
 #+LATEX_HEADER:   moredelim={[s][\itshape\color{brown}]{⟨}{⟩}},
