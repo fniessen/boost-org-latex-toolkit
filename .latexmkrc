@@ -55,6 +55,7 @@ $silent = 0;
                       bbl
                       bcf
                       blg
+                      dvi
                       fdb_latexmk
                       fls
                       idx
