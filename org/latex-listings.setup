@@ -15,44 +15,44 @@
 #+LATEX_HEADER: \usepackage{listings}
 #+LATEX_HEADER:
 #+LATEX_HEADER: % --------------------------------------------------------------
-#+LATEX_HEADER: % Colors
+#+LATEX_HEADER: % Colors.
 #+LATEX_HEADER: % --------------------------------------------------------------
 #+LATEX_HEADER: \usepackage{xcolor}
-#+LATEX_HEADER: \definecolor{mc@lstidentifier}{HTML}{000000} % black
-#+LATEX_HEADER: \definecolor{mc@lstcomment}{HTML}{008200}    % green
-#+LATEX_HEADER: \definecolor{mc@lststring}{HTML}{FF5500}     % orange
-#+LATEX_HEADER: \definecolor{mc@lstkeyword}{HTML}{0000FF}    % blue
-#+LATEX_HEADER: \definecolor{mc@lstbackground}{HTML}{FFFFCC} % light yellow
-#+LATEX_HEADER: \definecolor{mc@lstframe}{HTML}{FFEE88}      % pale yellow
+#+LATEX_HEADER: \definecolor{mc@lstidentifier}{HTML}{000000} % Black.
+#+LATEX_HEADER: \definecolor{mc@lstcomment}{HTML}{008200}    % Green.
+#+LATEX_HEADER: \definecolor{mc@lststring}{HTML}{FF5500}     % Orange.
+#+LATEX_HEADER: \definecolor{mc@lstkeyword}{HTML}{0000FF}    % Blue.
+#+LATEX_HEADER: \definecolor{mc@lstbackground}{HTML}{FFFFCC} % Light yellow.
+#+LATEX_HEADER: \definecolor{mc@lstframe}{HTML}{FFEE88}      % Pale yellow.
 #+LATEX_HEADER:
-#+LATEX_HEADER: \definecolor{mc@lstgitcmd}{HTML}{0000FF}      % blue: git, cd, ls...
-#+LATEX_HEADER: \definecolor{mc@lstgitsubcmd}{HTML}{008080}   % teal: commit, log, merge...
-#+LATEX_HEADER: \definecolor{mc@lstgitopt}{HTML}{CC5500}      % dark orange: graph, oneline, cached...
-#+LATEX_HEADER: \definecolor{mc@lstgitref}{HTML}{008200}      % green: HEAD, origin/main...
-#+LATEX_HEADER: \definecolor{mc@lstgitshortopt}{HTML}{AA0000} % dark red: a, p, v, m, am...
-#+LATEX_HEADER: \definecolor{mc@lstgboost}{HTML}{9900CC}      % purple: GitBoost aliases
+#+LATEX_HEADER: \definecolor{mc@lstgitcmd}{HTML}{0000FF}      % Blue: git, cd, ls, ...
+#+LATEX_HEADER: \definecolor{mc@lstgitsubcmd}{HTML}{008080}   % Teal: commit, log, merge, ...
+#+LATEX_HEADER: \definecolor{mc@lstgitopt}{HTML}{CC5500}      % Dark orange: graph, oneline, cached, ...
+#+LATEX_HEADER: \definecolor{mc@lstgitref}{HTML}{008200}      % Green: HEAD, origin/main, ...
+#+LATEX_HEADER: \definecolor{mc@lstgitshortopt}{HTML}{AA0000} % Dark red: a, p, v, m, am, ...
+#+LATEX_HEADER: \definecolor{mc@lstgboost}{HTML}{9900CC}      % Purple: GitBoost aliases.
 #+LATEX_HEADER:
 #+LATEX_HEADER: % Colors for diff listings.
-#+LATEX_HEADER: \definecolor{mc@diffstart}{HTML}{666666}   % gray
-#+LATEX_HEADER: \definecolor{mc@diffadded}{HTML}{008200}   % green
-#+LATEX_HEADER: \definecolor{mc@diffremoved}{HTML}{CC0000} % red
+#+LATEX_HEADER: \definecolor{mc@diffstart}{HTML}{666666}   % Gray.
+#+LATEX_HEADER: \definecolor{mc@diffadded}{HTML}{008200}   % Green.
+#+LATEX_HEADER: \definecolor{mc@diffremoved}{HTML}{CC0000} % Red.
 #+LATEX_HEADER:
-#+LATEX_HEADER: \definecolor{TeXbackgroundcolor}{HTML}{F1F9EF} % very light green
-#+LATEX_HEADER: \definecolor{TeXrulecolor}{HTML}{D4E8E3}       % pale green
+#+LATEX_HEADER: \definecolor{TeXbackgroundcolor}{HTML}{F1F9EF} % Very light green.
+#+LATEX_HEADER: \definecolor{TeXrulecolor}{HTML}{D4E8E3}       % Pale green.
 #+LATEX_HEADER:
-#+LATEX_HEADER: \definecolor{mc@examplebackground}{HTML}{EAF7EA} % very light green
-#+LATEX_HEADER: \definecolor{mc@exampleframe}{HTML}{A8D5A8}      % light green
+#+LATEX_HEADER: \definecolor{mc@examplebackground}{HTML}{EAF7EA} % Very light green.
+#+LATEX_HEADER: \definecolor{mc@exampleframe}{HTML}{A8D5A8}      % Light green.
 #+LATEX_HEADER:
 #+LATEX_HEADER: % --------------------------------------------------------------
-#+LATEX_HEADER: % Languages
+#+LATEX_HEADER: % Languages.
 #+LATEX_HEADER: % --------------------------------------------------------------
 #+LATEX_HEADER: % Diff language for listings.
 #+LATEX_HEADER: \lstdefinelanguage{diff}{%
-#+LATEX_HEADER:   morecomment=[f][\color{mc@diffstart}]{@@},% hunk headers
-#+LATEX_HEADER:   morecomment=[f][\color{mc@diffremoved}]-,% removed lines
-#+LATEX_HEADER:   morecomment=[f][\color{mc@diffadded}]+,% added lines
-#+LATEX_HEADER:   morecomment=[f][\color{mc@diffstart}]{---},% file headers (old)
-#+LATEX_HEADER:   morecomment=[f][\color{mc@diffstart}]{+++},% file headers (new)
+#+LATEX_HEADER:   morecomment=[f][\color{mc@diffstart}]{@@},% Hunk headers.
+#+LATEX_HEADER:   morecomment=[f][\color{mc@diffremoved}]-,% Removed lines.
+#+LATEX_HEADER:   morecomment=[f][\color{mc@diffadded}]+,% Added lines.
+#+LATEX_HEADER:   morecomment=[f][\color{mc@diffstart}]{---},% File headers (old).
+#+LATEX_HEADER:   morecomment=[f][\color{mc@diffstart}]{+++},% File headers (new).
 #+LATEX_HEADER: }
 #+LATEX_HEADER:
 #+LATEX_HEADER: % Plain text language for listings.
@@ -225,7 +225,7 @@
 #+LATEX_HEADER: }
 #+LATEX_HEADER:
 #+LATEX_HEADER: % --------------------------------------------------------------
-#+LATEX_HEADER: % Styles
+#+LATEX_HEADER: % Styles.
 #+LATEX_HEADER: % --------------------------------------------------------------
 #+LATEX_HEADER: \lstdefinestyle{TeX}{
 #+LATEX_HEADER:   backgroundcolor=\color{TeXbackgroundcolor},
@@ -238,7 +238,7 @@
 #+LATEX_HEADER: }
 #+LATEX_HEADER:
 #+LATEX_HEADER: % --------------------------------------------------------------
-#+LATEX_HEADER: % Accessibility
+#+LATEX_HEADER: % Accessibility.
 #+LATEX_HEADER: % Hide line numbers from copy/paste operations in PDF output.
 #+LATEX_HEADER: % --------------------------------------------------------------
 #+LATEX_HEADER: \usepackage{accsupp}
@@ -255,12 +255,12 @@
 #+LATEX_HEADER: }
 #+LATEX_HEADER:
 #+LATEX_HEADER: % --------------------------------------------------------------
-#+LATEX_HEADER: % Global listings defaults
+#+LATEX_HEADER: % Global listings defaults.
 #+LATEX_HEADER: % --------------------------------------------------------------
 #+LATEX_HEADER: \lstset{%
 #+LATEX_HEADER:   lineskip=-0.1em,
 #+LATEX_HEADER:   %
-#+LATEX_HEADER:   basicstyle=\ttfamily\scriptsize, % font that is used for the code
+#+LATEX_HEADER:   basicstyle=\ttfamily\scriptsize, % Font used for code.
 #+LATEX_HEADER:   identifierstyle=\color{mc@lstidentifier},
 #+LATEX_HEADER:   commentstyle=\color{mc@lstcomment}\itshape,
 #+LATEX_HEADER:   stringstyle=\color{mc@lststring},
@@ -269,45 +269,45 @@
 #+LATEX_HEADER:   extendedchars=true,
 #+LATEX_HEADER:   inputencoding=utf8,
 #+LATEX_HEADER:   upquote,
-#+LATEX_HEADER:   tabsize=4, % set default tabsize to 4 spaces
-#+LATEX_HEADER:   showtabs=false, % show tabs within strings adding particular underscores
+#+LATEX_HEADER:   tabsize=4, % Set the default tab size to 4 spaces.
+#+LATEX_HEADER:   showtabs=false, % Show tabs within strings using underscores.
 #+LATEX_HEADER:   %  tab=$\to$,
-#+LATEX_HEADER:   showspaces=false, % show spaces adding particular underscores
-#+LATEX_HEADER:   showstringspaces=false, % underline spaces within strings
+#+LATEX_HEADER:   showspaces=false, % Show spaces using underscores.
+#+LATEX_HEADER:   showstringspaces=false, % Underline spaces within strings.
 #+LATEX_HEADER:   %
-#+LATEX_HEADER:   numbers=left, % where to put the line numbers
-# #+LATEX_HEADER:   stepnumber=0, % do not display line numbers
-#+LATEX_HEADER:   numberstyle=\lstnumberstyle, % line number font size
+#+LATEX_HEADER:   numbers=left, % Position of line numbers.
+# #+LATEX_HEADER:   stepnumber=0, % Do not display line numbers.
+#+LATEX_HEADER:   numberstyle=\lstnumberstyle, % Line number style.
 #+LATEX_HEADER:   %
-#+LATEX_HEADER:   captionpos=b, % set the caption position to `bottom'
+#+LATEX_HEADER:   captionpos=b, % Place captions below listings.
 #+LATEX_HEADER:   %
-#+LATEX_HEADER:   xleftmargin=0.4em, % text to the right
-#+LATEX_HEADER:   xrightmargin=0.4em, % text to the left
-#+LATEX_HEADER:   breaklines=true, % break long lines of code
+#+LATEX_HEADER:   xleftmargin=0.4em, % Text to the right.
+#+LATEX_HEADER:   xrightmargin=0.4em, % Text to the left.
+#+LATEX_HEADER:   breaklines=true, % Break long lines.
 #+LATEX_HEADER:   %
-#+LATEX_HEADER:   frame=single, % add a frame around the code
-#+LATEX_HEADER:   framexleftmargin=0pt, % frame back to the left
-#+LATEX_HEADER:   framexrightmargin=0pt, % frame back to the right
-#+LATEX_HEADER:   backgroundcolor=\color{mc@lstbackground}, % set the background color
-#+LATEX_HEADER:   rulecolor=\color{mc@lstframe}, % frame color
+#+LATEX_HEADER:   frame=single, % Draw a frame around listings.
+#+LATEX_HEADER:   framexleftmargin=0pt, % Left frame margin.
+#+LATEX_HEADER:   framexrightmargin=0pt, % Right frame margin.
+#+LATEX_HEADER:   backgroundcolor=\color{mc@lstbackground}, % Background color.
+#+LATEX_HEADER:   rulecolor=\color{mc@lstframe}, % Frame color.
 #+LATEX_HEADER:   %
-#+LATEX_HEADER:   columns=flexible, % try not to ruin the spacing intended by the font designer
-#+LATEX_HEADER:   keepspaces=true, % don't drop spaces to fix column alignment
+#+LATEX_HEADER:   columns=flexible, % Preserve the font's intended spacing.
+#+LATEX_HEADER:   keepspaces=true, % Preserve spaces for alignment.
 #+LATEX_HEADER:   %
-#+LATEX_HEADER:   % mathescape, % allow escaping to (La)TeX mode within $..$
-# #+LATEX_HEADER:   escapechar=², % allow escaping to (La)TeX mode within ²..²
+#+LATEX_HEADER:   % mathescape, % Allow escaping to (La)TeX mode within $..$.
+# #+LATEX_HEADER:   escapechar=², % Allow escaping to (La)TeX mode within ²..².
 #+LATEX_HEADER:   %
 #+LATEX_HEADER:   % Display placeholders between ⟨ and ⟩, in italic and in a specific color.
 #+LATEX_HEADER:   moredelim={[s][\itshape\color{brown}]{⟨}{⟩}},
 #+LATEX_HEADER: }
 #+LATEX_HEADER:
 #+LATEX_HEADER: % --------------------------------------------------------------
-#+LATEX_HEADER: % Unicode support for listings
+#+LATEX_HEADER: % Unicode support for listings.
 #+LATEX_HEADER: % --------------------------------------------------------------
 #+LATEX_HEADER: % Extend listings' internal character table to recognize Unicode
 #+LATEX_HEADER: % code points above 255. This allows characters such as ⟨, ⟩ and
-#+LATEX_HEADER: % ... to be processed correctly when using modern Unicode engines
-#+LATEX_HEADER: % (LuaLaTeX and XeLaTeX).
+#+LATEX_HEADER: % horizontal ellipsis to be processed correctly when using
+#+LATEX_HEADER: % modern Unicode engines (LuaLaTeX and XeLaTeX).
 #+LATEX_HEADER: \makeatletter
 #+LATEX_HEADER: \lst@InputCatcodes
 #+LATEX_HEADER: \def\lst@DefEC{%
@@ -322,16 +322,17 @@
 #+LATEX_HEADER:   ^^f0^^f1^^f2^^f3^^f4^^f5^^f6^^f7^^f8^^f9^^fa^^fb^^fc^^fd^^fe^^ff%
 #+LATEX_HEADER:   % Additional Unicode characters.
 #+LATEX_HEADER:   ^^^^20ac^^^^0153^^^^0152% €, œ, Œ
-#+LATEX_HEADER:   ^^^^27e8% ⟨
-#+LATEX_HEADER:   ^^^^27e9% ⟩
-#+LATEX_HEADER:   ^^^^2026% ...
+#+LATEX_HEADER:   ^^^^27e8% Left angle bracket.
+#+LATEX_HEADER:   ^^^^27e9% Right angle bracket.
+#+LATEX_HEADER:   ^^^^2026% Horizontal ellipsis.
 #+LATEX_HEADER:   ^^00}
 #+LATEX_HEADER: \lst@RestoreCatcodes
 #+LATEX_HEADER: \makeatother
 #+LATEX_HEADER:
 #+LATEX_HEADER: % --------------------------------------------------------------
-#+LATEX_HEADER: % Inline command boxes (used by Org macros ikbd / kbd)
-#+LATEX_HEADER: % Requires: listings + tcolorbox
+#+LATEX_HEADER: % Inline command boxes.
+#+LATEX_HEADER: % Used by Org macros ikbd and kbd.
+#+LATEX_HEADER: % Requires: listings and tcolorbox.
 #+LATEX_HEADER: % --------------------------------------------------------------
 #+LATEX_HEADER: \usepackage{tcolorbox}
 #+LATEX_HEADER:
@@ -363,8 +364,8 @@
 #+LATEX_HEADER: }
 #+LATEX_HEADER:
 #+LATEX_HEADER: % --------------------------------------------------------------
-#+LATEX_HEADER: % Terminal sessions
-#+LATEX_HEADER: % Requires: listings + tcolorbox + accsupp
+#+LATEX_HEADER: % Terminal sessions.
+#+LATEX_HEADER: % Requires: listings, tcolorbox and accsupp.
 #+LATEX_HEADER: % --------------------------------------------------------------
 #+LATEX_HEADER: % Style used for shell sessions displayed in a terminal-like box.
 #+LATEX_HEADER: \lstdefinestyle{terminal}{
