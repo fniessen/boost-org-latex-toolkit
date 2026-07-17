@@ -1,16 +1,17 @@
-;;; org-mc-latex-classes.el --- MCit configuration file for LaTeX
+;;; org-mc-latex-classes.el --- MCit Org LaTeX classes -*- lexical-binding: t; -*-
 
 ;;; Commentary:
+
+;; Define the custom MCit LaTeX classes used by Org's LaTeX exporter.
+;;
+;; These classes suppress Org's default package list as well as
+;; `org-latex-packages-alist'.  Package loading is expected to be performed by
+;; the corresponding LaTeX document classes or through `#+LATEX_HEADER:'
+;; directives.
 
 ;;; Code:
 
 (require 'ox-latex)
-
-;; include the `babel' package for language-specific hyphenation and typography
-(add-to-list 'org-latex-packages-alist '("french" "babel") t)
-
-;; default class
-(setq org-latex-default-class "mcarticle")
 
 (defconst org-mc-latex-packages-header
   (concat
@@ -22,93 +23,57 @@
    "% End of org-mc-latex-classes.el -------------------\n")
   "Template inserted immediately after the `\\documentclass' declaration.
 
-The placeholders have the following meaning:
+The placeholders have the following meanings:
 
-- `[NO-DEFAULT-PACKAGES]` disables Org's default LaTeX packages.
-- `[NO-PACKAGES]` disables packages from `org-latex-packages-alist`.
-- `[EXTRA]` expands to user-defined `#+LATEX_HEADER:` lines.
+- `[NO-DEFAULT-PACKAGES]' suppresses Org's default LaTeX packages.
+- `[NO-PACKAGES]' suppresses packages from `org-latex-packages-alist'.
+- `[EXTRA]' expands to user-defined `#+LATEX_HEADER:' lines.")
 
-This template is used by custom Org LaTeX classes such as
-`mcarticle` and `mcreport`.")
+(defconst org-mc-latex-article-sections
+  '(("\\section{%s}" . "\\section*{%s}")
+    ("\\subsection{%s}" . "\\subsection*{%s}")
+    ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+    ("\\paragraph{%s}" . "\\paragraph*{%s}")
+    ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))
+  "Sectioning commands for article-like MCit LaTeX classes.")
 
-;; update the list of LaTeX classes and associated header (encoding, etc.) and
-;; structure
+(defconst org-mc-latex-report-sections
+  '(("\\chapter{%s}" . "\\chapter*{%s}")
+    ("\\section{%s}" . "\\section*{%s}")
+    ("\\subsection{%s}" . "\\subsection*{%s}")
+    ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+    ("\\paragraph{%s}" . "\\paragraph*{%s}"))
+  "Sectioning commands for report-like MCit LaTeX classes.")
 
-(add-to-list 'org-latex-classes
-             `("mcarticle"
-               ,(concat "\\documentclass{mcarticle}\n"
-                        org-mc-latex-packages-header)
-               ("\\section{%s}" . "\\section*{%s}")
-               ("\\subsection{%s}" . "\\subsection*{%s}")
-               ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-               ("\\paragraph{%s}" . "\\paragraph*{%s}")
-               ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+(defun org-mc-latex-register-class (name sections)
+  "Register an Org LaTeX class named NAME using SECTIONS.
 
-(add-to-list 'org-latex-classes
-             `("mcreport"
-               ,(concat "\\documentclass{mcreport}\n"
-                        org-mc-latex-packages-header)
-               ("\\chapter{%s}" . "\\chapter*{%s}")
-               ("\\section{%s}" . "\\section*{%s}")
-               ("\\subsection{%s}" . "\\subsection*{%s}")
-               ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-               ("\\paragraph{%s}" . "\\paragraph*{%s}")))
+NAME is used as both the Org class name and the LaTeX document class.
+SECTIONS is an Org LaTeX sectioning specification."
+  (add-to-list
+   'org-latex-classes
+   (cons name
+         (cons (concat "\\documentclass{" name "}\n"
+                       org-mc-latex-packages-header)
+               sections))))
 
-(add-to-list 'org-latex-classes
-             `("mcbook"
-               ,(concat "\\documentclass{mcbook}\n"
-                        org-mc-latex-packages-header)
-               ("\\chapter{%s}" . "\\chapter*{%s}")
-               ("\\section{%s}" . "\\section*{%s}")
-               ("\\subsection{%s}" . "\\subsection*{%s}")
-               ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-               ("\\paragraph{%s}" . "\\paragraph*{%s}")))
+(dolist (class '("mcarticle"
+                 "mccommercial"
+                 "mcwhitepaper"))
+  (org-mc-latex-register-class
+   class
+   org-mc-latex-article-sections))
 
-(add-to-list 'org-latex-classes
-             `("mccontract"
-               ,(concat "\\documentclass{mccontract}\n"
-                        org-mc-latex-packages-header)
-               ("\\mccarticle{%s}" . "\\mccarticle*{%s}")
-               ("\\mccparagraph{%s}" . "\\mccparagraph*{%s}")))
+(dolist (class '("mcreport"
+                 "mcbook"
+                 "mcurd"
+                 "aremis"))
+  (org-mc-latex-register-class
+   class
+   org-mc-latex-report-sections))
 
-(add-to-list 'org-latex-classes
-             `("mccommercial"
-               ,(concat "\\documentclass{mccommercial}\n"
-                        org-mc-latex-packages-header)
-               ("\\section{%s}" . "\\section*{%s}")
-               ("\\subsection{%s}" . "\\subsection*{%s}")
-               ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-               ("\\paragraph{%s}" . "\\paragraph*{%s}")
-               ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+(setq org-latex-default-class "mcarticle")
 
-(add-to-list 'org-latex-classes
-             `("mcurd"
-               ,(concat "\\documentclass{mcurd}\n"
-                        org-mc-latex-packages-header)
-               ("\\chapter{%s}" . "\\chapter*{%s}")
-               ("\\section{%s}" . "\\section*{%s}")
-               ("\\subsection{%s}" . "\\subsection*{%s}")
-               ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-               ("\\paragraph{%s}" . "\\paragraph*{%s}")))
-
-(add-to-list 'org-latex-classes
-             `("mcwhitepaper"
-               ,(concat "\\documentclass{mcwhitepaper}\n"
-                        org-mc-latex-packages-header)
-               ("\\section{%s}" . "\\section*{%s}")
-               ("\\subsection{%s}" . "\\subsection*{%s}")
-               ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-               ("\\paragraph{%s}" . "\\paragraph*{%s}")
-               ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
-
-(add-to-list 'org-latex-classes
-             `("aremis"
-               ,(concat "\\documentclass{aremis}\n"
-                        org-mc-latex-packages-header)
-               ("\\chapter{%s}" . "\\chapter*{%s}")
-               ("\\section{%s}" . "\\section*{%s}")
-               ("\\subsection{%s}" . "\\subsection*{%s}")
-               ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-               ("\\paragraph{%s}" . "\\paragraph*{%s}")))
+(provide 'org-mc-latex-classes)
 
 ;;; org-mc-latex-classes.el ends here
