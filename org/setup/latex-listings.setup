@@ -281,7 +281,8 @@
 #+LATEX_HEADER:   %
 #+LATEX_HEADER:   xleftmargin=0.4em, % Text to the right.
 #+LATEX_HEADER:   xrightmargin=0.4em, % Text to the left.
-#+LATEX_HEADER:   breaklines=true, % Break long lines.
+#+LATEX_HEADER:   breaklines=true, % Visually wrap long listing lines when possible.
+#+LATEX_HEADER:   breakatwhitespace=true, % Prefer whitespace as a visual wrap point.
 #+LATEX_HEADER:   %
 #+LATEX_HEADER:   frame=single, % Draw a frame around listings.
 #+LATEX_HEADER:   framexleftmargin=0pt, % Left frame margin.
@@ -289,8 +290,8 @@
 #+LATEX_HEADER:   backgroundcolor=\color{mc@lstbackground}, % Background color.
 #+LATEX_HEADER:   rulecolor=\color{mc@lstframe}, % Frame color.
 #+LATEX_HEADER:   %
-#+LATEX_HEADER:   columns=flexible, % Preserve the font's intended spacing.
-#+LATEX_HEADER:   keepspaces=true, % Preserve spaces for alignment.
+#+LATEX_HEADER:   columns=flexible, % Use flexible character widths instead of fixed columns.
+#+LATEX_HEADER:   keepspaces=true, % Preserve consecutive spaces and indentation.
 #+LATEX_HEADER:   %
 #+LATEX_HEADER:   % mathescape, % Allow escaping to (La)TeX mode within $..$.
 # #+LATEX_HEADER:   escapechar=², % Allow escaping to (La)TeX mode within ²..².
