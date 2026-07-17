@@ -266,8 +266,6 @@
 #+LATEX_HEADER:   stringstyle=\color{mc@lststring},
 #+LATEX_HEADER:   keywordstyle=\color{mc@lstkeyword},
 #+LATEX_HEADER:   %
-#+LATEX_HEADER:   extendedchars=true,
-#+LATEX_HEADER:   inputencoding=utf8,
 #+LATEX_HEADER:   upquote,
 #+LATEX_HEADER:   tabsize=4, % Set the default tab size to 4 spaces.
 #+LATEX_HEADER:   showtabs=false, % Show tabs within strings using underscores.
@@ -322,6 +320,7 @@
 #+LATEX_HEADER:   ^^f0^^f1^^f2^^f3^^f4^^f5^^f6^^f7^^f8^^f9^^fa^^fb^^fc^^fd^^fe^^ff%
 #+LATEX_HEADER:   % Additional Unicode characters.
 #+LATEX_HEADER:   ^^^^20ac^^^^0153^^^^0152% €, œ, Œ
+#+LATEX_HEADER:   ^^^^2194% Left-right arrow.
 #+LATEX_HEADER:   ^^^^27e8% Left angle bracket.
 #+LATEX_HEADER:   ^^^^27e9% Right angle bracket.
 #+LATEX_HEADER:   ^^^^2026% Horizontal ellipsis.
