@@ -1,4 +1,4 @@
-;;; org-mc-latex.el --- MCit configuration file for LaTeX
+;;; org-mc-latex-classes.el --- MCit configuration file for LaTeX
 
 ;;; Commentary:
 
@@ -13,36 +13,26 @@
 (setq org-latex-default-class "mcarticle")
 
 (defconst org-mc-latex-packages-header
-  (concat "[NO-DEFAULT-PACKAGES]"
-          "[NO-PACKAGES]"
-          "% org-mc-latex.el ----------------------\n"
-          "\\usepackage[AUTO]{inputenc}\n"
-          "% extra (#+LATEX_HEADER: lines) --------\n"
-          "[EXTRA]\n"
-          "% end of `org-latex-classes' -----------"
-          "--------------------------------------\n")
-  "Header that will be inserted after the `\documentclass' LaTeX macro.")
+  (concat
+   "[NO-DEFAULT-PACKAGES]\n"
+   "[NO-PACKAGES]\n"
+   "% org-mc-latex-classes.el --------------------------\n"
+   "% Additional LaTeX headers from #+LATEX_HEADER lines\n"
+   "[EXTRA]\n"
+   "% End of org-mc-latex-classes.el -------------------\n")
+  "Template inserted immediately after the `\\documentclass' declaration.
+
+The placeholders have the following meaning:
+
+- `[NO-DEFAULT-PACKAGES]` disables Org's default LaTeX packages.
+- `[NO-PACKAGES]` disables packages from `org-latex-packages-alist`.
+- `[EXTRA]` expands to user-defined `#+LATEX_HEADER:` lines.
+
+This template is used by custom Org LaTeX classes such as
+`mcarticle` and `mcreport`.")
 
 ;; update the list of LaTeX classes and associated header (encoding, etc.) and
 ;; structure
-
-;; NOT necessary anymore since Org 8.0.3?
-;; (add-to-list 'org-latex-classes
-;;              `("beamer"
-;;                ,(concat "\\documentclass[presentation,t]{beamer}\n"
-;;                         "\\usepackage{etex}% too many packages (for PDFTeX)\n"
-;;                         "% default packages ---------------------\n"
-;;                         "[DEFAULT-PACKAGES]"
-;;                         "% packages -----------------------------\n"
-;;                         "[PACKAGES]"
-;;                         "% org-mc-latex.el ----------------------\n"
-;;                         "% extra (#+LATEX/Beamer_HEADER: lines) -\n"
-;;                         "[EXTRA]\n"
-;;                         "% end of `org-latex-classes' -----------"
-;;                         "--------------------------------------\n")
-;;                ("\\section{%s}" . "\\section*{%s}")
-;;                ("\\subsection{%s}" . "\\subsection*{%s}")
-;;                ("\\subsubsection{%s}" . "\\subsubsection*{%s}")))
 
 (add-to-list 'org-latex-classes
              `("mcarticle"
@@ -121,4 +111,4 @@
                ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
                ("\\paragraph{%s}" . "\\paragraph*{%s}")))
 
-;;; org-mc-latex.el ends here
+;;; org-mc-latex-classes.el ends here
