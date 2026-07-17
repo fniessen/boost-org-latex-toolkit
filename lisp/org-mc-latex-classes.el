@@ -1,5 +1,4 @@
-;;; org-mc-latex-classes.el --- MCit Org LaTeX classes -*- lexical-binding: t; -*-
-
+;;; org-mc-latex-classes.el --- Custom Org LaTeX classes for MCit -*- lexical-binding: t; -*-
 ;;; Commentary:
 
 ;; Define the custom MCit LaTeX classes used by Org's LaTeX exporter.
@@ -45,17 +44,34 @@ The placeholders have the following meanings:
     ("\\paragraph{%s}" . "\\paragraph*{%s}"))
   "Sectioning commands for report-like MCit LaTeX classes.")
 
+(defconst org-mc-latex-book-sections
+  '(("\\part{%s}" . "\\part*{%s}")
+    ("\\chapter{%s}" . "\\chapter*{%s}")
+    ("\\section{%s}" . "\\section*{%s}")
+    ("\\subsection{%s}" . "\\subsection*{%s}")
+    ("\\subsubsection{%s}" . "\\subsubsection*{%s}"))
+  "Sectioning commands for book-like MCit LaTeX classes.")
+
 (defconst org-mc-latex-class-groups
-  '((org-mc-latex-article-sections
+  `((,org-mc-latex-article-sections
      "mcarticle"
      "mccommercial"
      "mcwhitepaper")
-    (org-mc-latex-report-sections
+    (,org-mc-latex-report-sections
      "mcreport"
-     "mcbook"
      "mcurd"
-     "aremis"))
+     "aremis")
+    (,org-mc-latex-book-sections
+     "mcbook"))
   "Mapping between custom LaTeX classes and their sectioning commands.")
+
+(defun org-mc-copy-section-specs (sections)
+  "Return a deep copy of Org LaTeX section specifications."
+  (mapcar
+   (lambda (cell)
+     (cons (copy-sequence (car cell))
+           (copy-sequence (cdr cell))))
+   sections))
 
 (defun org-mc-latex-register-class (name sections)
   "Register an Org LaTeX class named NAME using SECTIONS.
@@ -64,17 +80,19 @@ NAME is used both as the Org class name and as the LaTeX
 `\\documentclass'.
 
 SECTIONS is an Org LaTeX sectioning specification."
-  (add-to-list
-   'org-latex-classes
-   (cons
-    name
-    (concat "\\documentclass{" name "}\n"
-            org-mc-latex-packages-header))))
+  (add-to-list 'org-latex-classes
+               `(,name
+                 ,(format "\\documentclass{%s}\n%s"
+                          name
+                          org-mc-latex-packages-header)
+                 ,@(copy-tree sections t))))
 
 (dolist (group org-mc-latex-class-groups)
-  (let ((sections (symbol-value (car group))))
+  (let ((sections (car group)))
     (dolist (class (cdr group))
-      (org-mc-latex-register-class class sections))))
+      (org-mc-latex-register-class
+       class
+       (org-mc-copy-section-specs sections)))))
 
 (setq org-latex-default-class "mcarticle")
 
