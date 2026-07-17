@@ -45,32 +45,36 @@ The placeholders have the following meanings:
     ("\\paragraph{%s}" . "\\paragraph*{%s}"))
   "Sectioning commands for report-like MCit LaTeX classes.")
 
+(defconst org-mc-latex-class-groups
+  '((org-mc-latex-article-sections
+     "mcarticle"
+     "mccommercial"
+     "mcwhitepaper")
+    (org-mc-latex-report-sections
+     "mcreport"
+     "mcbook"
+     "mcurd"
+     "aremis"))
+  "Mapping between custom LaTeX classes and their sectioning commands.")
+
 (defun org-mc-latex-register-class (name sections)
   "Register an Org LaTeX class named NAME using SECTIONS.
 
-NAME is used as both the Org class name and the LaTeX document class.
+NAME is used both as the Org class name and as the LaTeX
+`\\documentclass'.
+
 SECTIONS is an Org LaTeX sectioning specification."
   (add-to-list
    'org-latex-classes
-   (cons name
-         (cons (concat "\\documentclass{" name "}\n"
-                       org-mc-latex-packages-header)
-               sections))))
+   (cons
+    name
+    (concat "\\documentclass{" name "}\n"
+            org-mc-latex-packages-header))))
 
-(dolist (class '("mcarticle"
-                 "mccommercial"
-                 "mcwhitepaper"))
-  (org-mc-latex-register-class
-   class
-   org-mc-latex-article-sections))
-
-(dolist (class '("mcreport"
-                 "mcbook"
-                 "mcurd"
-                 "aremis"))
-  (org-mc-latex-register-class
-   class
-   org-mc-latex-report-sections))
+(dolist (group org-mc-latex-class-groups)
+  (let ((sections (symbol-value (car group))))
+    (dolist (class (cdr group))
+      (org-mc-latex-register-class class sections))))
 
 (setq org-latex-default-class "mcarticle")
 
