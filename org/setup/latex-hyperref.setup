@@ -6,18 +6,21 @@
 #+LATEX_HEADER: % Scope: LaTeX exports using hyperref (Beamer and non-Beamer)
 #+LATEX_HEADER: % ==============================================================
 
-#+LATEX_HEADER: % Custom color used for internal document links.
+#+LATEX_HEADER: % Custom colors used for document links.
 #+LATEX_HEADER: \usepackage{xcolor}
 #+LATEX_HEADER: \definecolor{LinkBlue}{HTML}{0000CC}
 #+LATEX_HEADER: \definecolor{CiteGreen}{HTML}{008000}
 #+LATEX_HEADER: \definecolor{UrlMagenta}{HTML}{AA00AA}
 
+#+LATEX_HEADER: % Replace long destination names with numbered ones.
+#+LATEX_HEADER: \usepackage[num]{hypdestopt}
+
 #+LATEX_HEADER: % Hyperlink color configuration.
 #+LATEX_HEADER: \hypersetup{
-#+LATEX_HEADER:   colorlinks  = true,
-#+LATEX_HEADER:   linkcolor   = LinkBlue,
-#+LATEX_HEADER:   citecolor   = CiteGreen,
-#+LATEX_HEADER:   urlcolor    = UrlMagenta
+#+LATEX_HEADER:   colorlinks = true,
+#+LATEX_HEADER:   linkcolor  = LinkBlue,
+#+LATEX_HEADER:   citecolor  = CiteGreen,
+#+LATEX_HEADER:   urlcolor   = UrlMagenta
 #+LATEX_HEADER: }
 
 #+LATEX_HEADER: % ==============================================================
