@@ -38,16 +38,17 @@
 % Admonition icon
 % ---------------------------------------------------------------------------
 
-% TODO: Raise icon of -0.15ex?
 \newcommand{\boostboxicon}[1]{%
-  \tikz[baseline=(icon.base)]{
-    \node[
-      circle,
-      fill=white,
-      text=#1,
-      font=\sffamily\bfseries\tiny,
-      inner sep=0.35ex,
-    ] (icon) {!};
+  \raisebox{0.35ex}{%
+    \tikz[baseline=(icon.base)]{
+      \node[
+        circle,
+        fill=white,
+        text=#1,
+        font=\sffamily\bfseries\tiny,
+        inner sep=0.35ex,
+      ] (icon) {!};
+    }%
   }%
 }
 
