@@ -58,6 +58,14 @@
 #+LATEX_HEADER: % Plain text language for listings.
 #+LATEX_HEADER: \lstdefinelanguage{text}{}
 #+LATEX_HEADER:
+#+LATEX_HEADER: \lstdefinelanguage{conf}{
+#+LATEX_HEADER:   morecomment=[l]{\#},
+#+LATEX_HEADER:   morecomment=[l]{;},
+#+LATEX_HEADER:   morestring=[b]",
+#+LATEX_HEADER:   morestring=[b]',
+#+LATEX_HEADER:   sensitive=true
+#+LATEX_HEADER: }
+#+LATEX_HEADER:
 #+LATEX_HEADER: \lstdefinelanguage{org}{%
 #+LATEX_HEADER:   morekeywords={:exports, :noweb, :results, :session, :var},
 #+LATEX_HEADER:   sensitive=false,
