@@ -27,6 +27,10 @@
 \definecolor{boostredtitle}{HTML}{F29F97}
 \definecolor{boostredback}{HTML}{FDF3F2}
 
+% Inline tasks
+\definecolor{boosttodotitle}{HTML}{FFE55A}
+\definecolor{boosttodoback}{HTML}{FFF8CC}
+
 % Body text
 \definecolor{boostboxtext}{HTML}{404040}
 
@@ -34,6 +38,7 @@
 % Admonition icon
 % ---------------------------------------------------------------------------
 
+% TODO: Raise icon of -0.15ex?
 \newcommand{\boostboxicon}[1]{%
   \tikz[baseline=(icon.base)]{
     \node[
@@ -205,5 +210,67 @@
   {Error}
   {boostredtitle}
   {boostredback}
+
+% ---------------------------------------------------------------------------
+% Inline tasks
+% ---------------------------------------------------------------------------
+
+\NewTColorBox{boostinlinetask}{O{TODO} m O{}}{%
+  enhanced,
+  frame hidden,
+  boxrule=0pt,
+  sharp corners,
+  colback=boosttodoback,
+  colbacktitle=boosttodotitle,
+  coltitle=black,
+  coltext=boostboxtext,
+  fonttitle=\sffamily,
+  fontupper=\sffamily,
+  left=2mm,
+  right=2mm,
+  top=2.5mm,
+  bottom=2.5mm,
+  lefttitle=2mm,
+  righttitle=2mm,
+  toptitle=0.7mm,
+  bottomtitle=0.7mm,
+  before skip=0.8em,
+  after skip=0.8em,
+  title={%
+    \textbf{#1}%
+    \hspace{0.35em}%
+    #2%
+    \if\relax\detokenize{#3}\relax
+    \else
+      \hfill\texttt{\small:#3:}%
+    \fi
+  },
+}
+
+\NewDocumentCommand{\boostcompacttask}{O{TODO} m O{}}{%
+  \begin{tcolorbox}[
+    enhanced,
+    frame hidden,
+    boxrule=0pt,
+    sharp corners,
+    colback=boosttodotitle,
+    coltext=black,
+    fontupper=\sffamily,
+    left=2mm,
+    right=2mm,
+    top=0.7mm,
+    bottom=0.7mm,
+    before skip=0.8em,
+    after skip=0.8em,
+  ]
+    \textbf{#1}%
+    \hspace{0.35em}%
+    #2%
+    \if\relax\detokenize{#3}\relax
+    \else
+      \hfill\texttt{\small:#3:}%
+    \fi
+  \end{tcolorbox}%
+}
 
 \endinput
