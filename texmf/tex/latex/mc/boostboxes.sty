@@ -1,42 +1,42 @@
 %% boostboxes.sty
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{boostboxes}[2026/07/18 v1.1 Read the Docs-style boxes]
+\ProvidesPackage{boostboxes}[2026/07/18 v1.2 Read the Docs-style boxes]
 
 \RequirePackage{xcolor}
 \RequirePackage{tcolorbox}
 \tcbuselibrary{skins}
 
 % ---------------------------------------------------------------------------
-% Colours
+% Colors from the Read the Docs theme
 % ---------------------------------------------------------------------------
 
-% Note / Info
-\definecolor{boostnotetitle}{HTML}{6AB0DE}
-\definecolor{boostnoteback}{HTML}{E7F2FA}
+% Blue: note, seealso, admonition, info
+\definecolor{boostbluetitle}{HTML}{6AB0DE}
+\definecolor{boostblueback}{HTML}{E7F2FA}
 
-% Tip
-\definecolor{boosttiptitle}{HTML}{1ABC9C}
-\definecolor{boosttipback}{HTML}{DBFAF4}
+% Green: tip, hint, important
+\definecolor{boostgreentitle}{HTML}{1ABC9C}
+\definecolor{boostgreenback}{HTML}{DBFAF4}
 
-% Warning
-\definecolor{boostwarningtitle}{HTML}{F0B37E}
-\definecolor{boostwarningback}{HTML}{FFEDCC}
+% Orange: warning, attention, caution
+\definecolor{boostorangetitle}{HTML}{F0B37E}
+\definecolor{boostorangeback}{HTML}{FFEDCC}
 
-% Error
-\definecolor{boosterrortitle}{HTML}{F29F97}
-\definecolor{boosterrorback}{HTML}{FCE8E6}
+% Red: danger, error
+\definecolor{boostredtitle}{HTML}{F29F97}
+\definecolor{boostredback}{HTML}{FDF3F2}
 
 % Body text
-\definecolor{boostboxtext}{HTML}{202020}
+\definecolor{boostboxtext}{HTML}{404040}
 
 % ---------------------------------------------------------------------------
-% Icon
+% Admonition icon
 % ---------------------------------------------------------------------------
 
 \newcommand{\boostboxicon}[1]{%
   \raisebox{-0.15ex}{%
-    \tikz[baseline=(boosticon.base)]{
+    \tikz[baseline=(boosticon.base)]{%
       \node[
         circle,
         fill=white,
@@ -60,7 +60,6 @@
     boxrule=0pt,
     arc=0pt,
     outer arc=0pt,
-    titlerule=0pt,
     sharp corners,
     fontupper=\sffamily,
     fonttitle=\sffamily\bfseries,
@@ -72,55 +71,142 @@
     bottom=3.5mm,
     lefttitle=4mm,
     righttitle=4mm,
-    toptitle=1.8mm,
-    bottomtitle=1.8mm,
+    toptitle=1mm,
+    bottomtitle=1mm,
     before skip=1em,
     after skip=1em,
   }
 }
 
 % ---------------------------------------------------------------------------
-% Environments
+% Environment declaration
+%
+% \DeclareBoostBox
+%   {environment name}
+%   {displayed title}
+%   {title color}
+%   {background color}
 % ---------------------------------------------------------------------------
 
-\newtcolorbox{note}[1][]{
+\newcommand{\DeclareBoostBox}[4]{%
+  \newtcolorbox{#1}[1][]{%
+    boostbox,
+    colback=#4,
+    colbacktitle=#3,
+    title={%
+      \boostboxicon{#3}%
+      \hspace{0.6em}%
+      #2%
+    },
+    ##1
+  }%
+}
+
+% ---------------------------------------------------------------------------
+% Blue admonitions
+% ---------------------------------------------------------------------------
+
+\DeclareBoostBox
+  {note}
+  {Note}
+  {boostbluetitle}
+  {boostblueback}
+
+\DeclareBoostBox
+  {seealso}
+  {See also}
+  {boostbluetitle}
+  {boostblueback}
+
+% Kept for compatibility with the original package.
+\DeclareBoostBox
+  {info}
+  {Info}
+  {boostbluetitle}
+  {boostblueback}
+
+% Generic admonition with a user-provided title:
+%
+% \begin{admonition}{Custom title}
+%   ...
+% \end{admonition}
+%
+% Optional tcolorbox settings may precede the title:
+%
+% \begin{admonition}[breakable]{Custom title}
+%   ...
+% \end{admonition}
+
+\newtcolorbox{admonition}[2][]{%
   boostbox,
-  colback=boostnoteback,
-  colbacktitle=boostnotetitle,
-  title={\boostboxicon{boostnotetitle}\hspace{0.6em}Note},
+  colback=boostblueback,
+  colbacktitle=boostbluetitle,
+  title={%
+    \boostboxicon{boostbluetitle}%
+    \hspace{0.6em}%
+    #2%
+  },
   #1
 }
 
-\newtcolorbox{info}[1][]{
-  boostbox,
-  colback=boostnoteback,
-  colbacktitle=boostnotetitle,
-  title={\boostboxicon{boostnotetitle}\hspace{0.6em}Info},
-  #1
-}
+% ---------------------------------------------------------------------------
+% Green admonitions
+% ---------------------------------------------------------------------------
 
-\newtcolorbox{tip}[1][]{
-  boostbox,
-  colback=boosttipback,
-  colbacktitle=boosttiptitle,
-  title={\boostboxicon{boosttiptitle}\hspace{0.6em}Tip},
-  #1
-}
+\DeclareBoostBox
+  {tip}
+  {Tip}
+  {boostgreentitle}
+  {boostgreenback}
 
-\newtcolorbox{warning}[1][]{
-  boostbox,
-  colback=boostwarningback,
-  colbacktitle=boostwarningtitle,
-  title={\boostboxicon{boostwarningtitle}\hspace{0.6em}Warning},
-  #1
-}
+\DeclareBoostBox
+  {hint}
+  {Hint}
+  {boostgreentitle}
+  {boostgreenback}
 
-\newtcolorbox{error}[1][]{
-  boostbox,
-  colback=boosterrorback,
-  colbacktitle=boosterrortitle,
-  title={\boostboxicon{boosterrortitle}\hspace{0.6em}Error},
-  #1
-}
+\DeclareBoostBox
+  {important}
+  {Important}
+  {boostgreentitle}
+  {boostgreenback}
+
+% ---------------------------------------------------------------------------
+% Orange admonitions
+% ---------------------------------------------------------------------------
+
+\DeclareBoostBox
+  {warning}
+  {Warning}
+  {boostorangetitle}
+  {boostorangeback}
+
+\DeclareBoostBox
+  {attention}
+  {Attention}
+  {boostorangetitle}
+  {boostorangeback}
+
+\DeclareBoostBox
+  {caution}
+  {Caution}
+  {boostorangetitle}
+  {boostorangeback}
+
+% ---------------------------------------------------------------------------
+% Red admonitions
+% ---------------------------------------------------------------------------
+
+\DeclareBoostBox
+  {danger}
+  {Danger}
+  {boostredtitle}
+  {boostredback}
+
+\DeclareBoostBox
+  {error}
+  {Error}
+  {boostredtitle}
+  {boostredback}
 
 \endinput
