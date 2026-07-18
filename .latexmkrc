@@ -44,9 +44,9 @@ $max_repeat = 5;
 $silent = 0;
 
 # ---------------------------------------------------------
-# Generated file extensions
+# Generated intermediate file extensions
 #
-# Used by latexmk for dependency tracking.
+# Used by latexmk for dependency tracking and cleanup.
 # ---------------------------------------------------------
 
 @generated_exts = qw(
@@ -74,12 +74,15 @@ $silent = 0;
 # ---------------------------------------------------------
 # Cleaning behavior
 #
-#   latexmk -c  : remove auxiliary files
-#   latexmk -C  : remove auxiliary files more aggressively
+#   Clean     (latexmk -c)
+#     Delete generated intermediate files.
 #
-# The cleaning extensions are derived from the generated extensions to keep
-# a single source of truth.
+#   Clean All (latexmk -C)
+#     Delete generated intermediate and output files.
 # ---------------------------------------------------------
 
-$clean_ext      = join ' ', @generated_exts;
-$clean_full_ext = $clean_ext;
+# Intermediate files removed by both Clean and Clean All.
+$clean_ext = join ' ', @generated_exts;
+
+# Additional files removed by Clean All.
+$clean_full_ext = 'pdf';
