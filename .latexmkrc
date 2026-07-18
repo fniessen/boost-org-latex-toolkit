@@ -14,6 +14,8 @@ $pdf_mode = 4;
 # PDF mode 1: pdfLaTeX (kept for compatibility).
 # $pdflatex = 'pdflatex -interaction=nonstopmode -file-line-error -halt-on-error %O %S';
 $pdflatex = '';
+# Kept invalid so an accidental `latexmk -pdf` invocation does fail with
+# a configuration error.
 
 # PDF mode 4: LuaLaTeX (project's standard engine).
 $lualatex = 'lualatex -interaction=nonstopmode -file-line-error -halt-on-error %O %S';
