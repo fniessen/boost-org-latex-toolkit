@@ -24,7 +24,10 @@
   mcmessagebox,
   colback=mcinfobg,
   coltext=mcinfofg,
-  colframe=mcinfofg
+  colframe=mcinfofg,
+  % overlay={%
+  %   \node at ([xshift=5mm]frame.west)
+  %   {\includegraphics[width=7mm,height=7mm]{info}};}
 }
 
 % Tip
@@ -35,7 +38,10 @@
   mcmessagebox,
   colback=mctipbg,
   coltext=mctipfg,
-  colframe=mctipfg
+  colframe=mctipfg,
+  % overlay={%
+  %   \node at ([xshift=5mm]frame.west)
+  %   {\includegraphics[width=7mm,height=7mm]{tip}};}
 }
 
 % Note
@@ -46,7 +52,10 @@
   mcmessagebox,
   colback=mcnotebg,
   coltext=mcnotefg,
-  colframe=mcnotefg
+  colframe=mcnotefg,
+  % overlay={%
+  %   \node at ([xshift=5mm]frame.west)
+  %   {\includegraphics[width=7mm,height=7mm]{note}};}
 }
 
 % Warning and error
@@ -57,14 +66,20 @@
   mcmessagebox,
   colback=mcwarningbg,
   coltext=mcwarningfg,
-  colframe=mcwarningfg
+  colframe=mcwarningfg,
+  % overlay={%
+  %   \node at ([xshift=5mm]frame.west)
+  %   {\includegraphics[width=7mm,height=7mm]{warning}};}
 }
 
 \newtcolorbox{error}{
   mcmessagebox,
   colback=mcwarningbg,
   coltext=mcwarningfg,
-  colframe=mcwarningfg
+  colframe=mcwarningfg,
+  % overlay={%
+  %   \node at ([xshift=5mm]frame.west)
+  %   {\includegraphics[width=7mm,height=7mm]{warning}};}
 }
 
 \endinput

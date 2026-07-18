@@ -1,11 +1,11 @@
 %% mcdocument.sty -- LaTeX2e MC common commands and environments
 %
-% Copyright (C) 2008-2019 Fabrice Niessen. All rights reserved.
+% Copyright (C) 2008-2026 Fabrice Niessen. All rights reserved.
 
 %* --[ Identification --------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{mcdocument}[2025/01/05 v1.3 Mission Critical IT Common]
+\ProvidesPackage{mcdocument}[2026/07/18 v1.3 Mission Critical IT Common]
 
 %* --[ Imports ---------------------------------------------------------------
 
@@ -31,6 +31,8 @@
 \RequirePackage{marvosym} % it loads the eurosym package with "official" option.
 \RequirePackage{textcomp} % mainly for \texteuro
 \RequirePackage{hyperref} % likes to be loaded last (behalf exceptions)
+
+\RequirePackage{mcboxes}
 
 %* --[ Setup -----------------------------------------------------------------
 
@@ -254,81 +256,6 @@ ABCDEF abcdef 123456 ,;:!}%
 \def\FrameCommand{\fboxsep=3pt \fcolorbox{framecolor}{shadecolor}}%
 \MakeFramed {\FrameRestore}}%
 {\endMakeFramed}
-
-\RequirePackage{tcolorbox}
-\tcbuselibrary{skins}
-
-\definecolor{infobg}{HTML}{BDE5F8}
-\definecolor{infofg}{HTML}{00529B}
-
-\newtcolorbox{info}{%
-  enhanced,
-  colback=infobg,
-  coltext=infofg,
-  colframe=infofg,
-  fontupper=\sffamily,
-  left=10mm,
-  % overlay={%
-  %   \node at ([xshift=5mm]frame.west)
-  %   {\includegraphics[width=7mm,height=7mm]{info}};}
-}
-
-\definecolor{tipbg}{HTML}{DFF2BF}
-\definecolor{tipfg}{HTML}{4F8A10}
-
-\newtcolorbox{tip}{%
-  enhanced,
-  colback=tipbg,
-  coltext=tipfg,
-  colframe=tipfg,
-  fontupper=\sffamily,
-  left=10mm,
-  % overlay={%
-  %   \node at ([xshift=5mm]frame.west)
-  %   {\includegraphics[width=7mm,height=7mm]{tip}};}
-}
-
-\definecolor{notebg}{HTML}{FEEFB3}
-\definecolor{notefg}{HTML}{9F6000}
-
-\newtcolorbox{note}{%
-  enhanced,
-  colback=notebg,
-  coltext=notefg,
-  colframe=notefg,
-  fontupper=\sffamily,
-  left=10mm,
-  % overlay={%
-  %   \node at ([xshift=5mm]frame.west)
-  %   {\includegraphics[width=7mm,height=7mm]{note}};}
-}
-
-\definecolor{warningbg}{HTML}{FFBABA}
-\definecolor{warningfg}{HTML}{D8000C}
-
-\newtcolorbox{warning}{%
-  enhanced,
-  colback=warningbg,
-  coltext=warningfg,
-  colframe=warningfg,
-  fontupper=\sffamily,
-  left=10mm,
-  % overlay={%
-  %   \node at ([xshift=5mm]frame.west)
-  %   {\includegraphics[width=7mm,height=7mm]{warning}};}
-}
-
-\newtcolorbox{error}{%
-  enhanced,
-  colback=warningbg,
-  coltext=warningfg,
-  colframe=warningfg,
-  fontupper=\sffamily,
-  left=10mm,
-  % overlay={%
-  %   \node at ([xshift=5mm]frame.west)
-  %   {\includegraphics[width=7mm,height=7mm]{warning}};}
-}
 
 %% End of package
 \endinput % very last line
