@@ -11,14 +11,14 @@ $pdf_mode = 4;
 # PDF engines
 # ---------------------------------------------------------
 
-# LuaLaTeX is the project's standard engine.
-# The pdflatex command is kept for convenience should the engine be changed
-# temporarily.
-$pdflatex = 'pdflatex -interaction=nonstopmode -halt-on-error %O %S';
+# PDF mode 1: pdfLaTeX (kept for compatibility).
+# $pdflatex = 'pdflatex -interaction=nonstopmode -file-line-error -halt-on-error %O %S';
+$pdflatex = '';
 
-$lualatex = 'lualatex -interaction=nonstopmode -halt-on-error %O %S';
+# PDF mode 4: LuaLaTeX (project's standard engine).
+$lualatex = 'lualatex -interaction=nonstopmode -file-line-error -halt-on-error %O %S';
 
-# Disable XeLaTeX explicitly (safety).
+# PDF mode 5: XeLaTeX (explicitly disabled).
 $xelatex = '';
 
 # ---------------------------------------------------------
