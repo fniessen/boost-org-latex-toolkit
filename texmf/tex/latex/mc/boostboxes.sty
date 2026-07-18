@@ -35,17 +35,14 @@
 % ---------------------------------------------------------------------------
 
 \newcommand{\boostboxicon}[1]{%
-  \raisebox{-0.15ex}{%
-    \tikz[baseline=(boosticon.base)]{%
-      \node[
-        circle,
-        fill=white,
-        text=#1,
-        font=\sffamily\bfseries\scriptsize,
-        inner sep=0pt,
-        minimum size=2.8ex
-      ] (boosticon) {!};
-    }%
+  \tikz[baseline=(icon.base)]{
+    \node[
+      circle,
+      fill=white,
+      text=#1,
+      font=\sffamily\bfseries\tiny,
+      inner sep=0.35ex,
+    ] (icon) {!};
   }%
 }
 
@@ -65,12 +62,12 @@
     fonttitle=\sffamily\bfseries,
     coltext=boostboxtext,
     coltitle=white,
-    left=4mm,
-    right=4mm,
+    left=2mm,
+    right=2mm,
     top=3.5mm,
     bottom=3.5mm,
-    lefttitle=4mm,
-    righttitle=4mm,
+    lefttitle=2mm,
+    righttitle=2mm,
     toptitle=1mm,
     bottomtitle=1mm,
     before skip=1em,
