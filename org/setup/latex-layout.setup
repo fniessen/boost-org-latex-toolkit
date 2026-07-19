@@ -2,7 +2,7 @@
 
 #+LATEX_HEADER: % ==============================================================
 #+LATEX_HEADER: % BEGIN SETUPFILE: latex-layout.setup
-#+LATEX_HEADER: % Purpose: General LaTeX layout, spacing, and admonition boxes
+#+LATEX_HEADER: % Purpose: General LaTeX layout and spacing configuration
 #+LATEX_HEADER: % Scope: LaTeX exports using standard classes and Beamer
 #+LATEX_HEADER: % ==============================================================
 
@@ -11,9 +11,6 @@
 
 #+LATEX_HEADER: % Use vertical space instead of paragraph indentation.
 #+LATEX_HEADER: \usepackage{parskip}
-
-#+LATEX_HEADER: % Read the Docs-style admonition and callout boxes.
-#+LATEX_HEADER: \usepackage{boostboxes}
 
 #+LATEX_HEADER: % Compact list spacing (itemize, enumerate, description).
 #+LATEX_HEADER: \AtBeginEnvironment{itemize}{%

@@ -1,0 +1,14 @@
+# -*- mode: org; -*-
+
+#+LATEX_HEADER: % ==============================================================
+#+LATEX_HEADER: % BEGIN SETUPFILE: latex-admonitions.setup
+#+LATEX_HEADER: % Purpose: Read the Docs-style admonition and task boxes
+#+LATEX_HEADER: % Scope: LaTeX exports using standard classes and Beamer
+#+LATEX_HEADER: % ==============================================================
+
+#+LATEX_HEADER: % Read the Docs-style admonition and callout boxes.
+#+LATEX_HEADER: \usepackage{boostboxes}
+
+#+LATEX_HEADER: % ==============================================================
+#+LATEX_HEADER: % END SETUPFILE: latex-admonitions.setup
+#+LATEX_HEADER: % ==============================================================
